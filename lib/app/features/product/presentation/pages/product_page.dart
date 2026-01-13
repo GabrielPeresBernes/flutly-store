@@ -69,10 +69,12 @@ class ProductPage extends StatelessWidget {
                   child: switch (state) {
                     ProductLoading() ||
                     ProductInitial() => const ProductLoadingWidget(),
+
                     ProductFailure(:final exception) => ProductFailureWidget(
                       exception: exception,
                       id: id,
                     ),
+
                     ProductLoaded(:final product) => ProductLoadedWidget(
                       product: product,
                     ),
