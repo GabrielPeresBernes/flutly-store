@@ -149,6 +149,7 @@ Gabriel Peres Bernes
 Mobile Software Engineer — Flutter Specialist
 
 LinkedIn: [https://www.linkedin.com/in/gabriel-peres-bernes/](https://www.linkedin.com/in/gabriel-peres-bernes/)
+
 Email: bernes.dev@gmail.com
 
 ## 📄 License & Disclaimer
