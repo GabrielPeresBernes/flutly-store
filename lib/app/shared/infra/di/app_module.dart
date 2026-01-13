@@ -21,6 +21,7 @@ import '../../../features/product/product.dart';
 import '../../../features/profile/profile.dart';
 import '../../../features/search/search.dart';
 import '../../bloc/app_cubit.dart';
+import '../../utils/env.dart';
 import 'firebase_module.dart';
 
 /// Application dependency injection module
@@ -49,6 +50,8 @@ class AppModule extends InjectorModule {
     ]);
 
     await EasyLocalization.ensureInitialized();
+
+    Env.validate();
 
     await const FirebaseModule().register(injector);
 
