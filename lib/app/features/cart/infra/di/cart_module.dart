@@ -36,8 +36,8 @@ class CartModule extends InjectorModule {
       ),
     );
 
-    injector.registerFactory<CartCubit>(
-      () => CartCubit(injector.get<CartRepository>()),
+    injector.registerSingleton<CartCubit>(
+      CartCubit(injector.get<CartRepository>()),
     );
 
     injector.registerFactory<CartPopularProductsCubit>(
