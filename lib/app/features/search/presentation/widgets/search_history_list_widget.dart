@@ -73,7 +73,6 @@ class _SearchHistoryListWidgetState extends State<SearchHistoryListWidget> {
               ),
             );
           },
-          // separatorBuilder: (context, index) => const SizedBox(height: 20),
         ),
       ),
     );

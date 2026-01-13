@@ -29,23 +29,6 @@ class ProductLoadingWidget extends StatelessWidget {
                 height: 48,
                 borderRadius: 10,
               ),
-              // const SizedBox(height: 40),
-              // Container(
-              //   height: 20,
-              //   width: 100,
-              //   decoration: BoxDecoration(
-              //     color: AppColors.gray400,
-              //     borderRadius: BorderRadius.circular(6),
-              //   ),
-              // ),
-              // const SizedBox(height: 12),
-              // Container(
-              //   height: 60,
-              //   decoration: BoxDecoration(
-              //     color: AppColors.gray400,
-              //     borderRadius: BorderRadius.circular(6),
-              //   ),
-              // ),
             ],
           ),
         ),
