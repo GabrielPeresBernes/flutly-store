@@ -1,0 +1,32 @@
+{
+  "catalog": {
+    "title": "Products",
+    "filters": {
+      "title": "Filters",
+      "sort_by": "Sort By",
+      "price_range": "Price Range",
+      "min_price": "Min Price",
+      "max_price": "Max Price",
+      "apply": "Apply Filters",
+      "clear": "Clear Filters",
+      "sort": {
+        "popularity": "Popularity",
+        "price_high_to_low": "High Price",
+        "price_low_to_high": "Low Price",
+        "unsorted": "Unsorted"
+      }
+    },
+    "empty": {
+      "title": "No Products Found",
+      "description": "Your search did not match any products.\nPlease try different keywords or filters."
+    },
+    "errors": {
+      "initial": "Something went wrong while loading products.\n Please try again.",
+      "new_page": "Something went wrong...",
+      "fetch_failed": "Failed to fetch products"
+    },
+    "actions": {
+      "retry": "Retry"
+    }
+  }
+}

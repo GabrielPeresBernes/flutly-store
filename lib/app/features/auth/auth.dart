@@ -1,0 +1,16 @@
+export 'data/data_sources/auth_local_data_source.dart';
+export 'data/data_sources/auth_local_data_source_impl.dart';
+export 'data/data_sources/auth_remote_data_source.dart';
+export 'data/data_sources/auth_remote_data_source_impl.dart';
+export 'data/models/credentials_model.dart';
+export 'data/repositories/auth_repository_impl.dart';
+export 'domain/entities/credentials.dart';
+export 'domain/repositories/auth_repository.dart';
+export 'infra/di/auth_module.dart';
+export 'infra/routes/auth_route.dart';
+export 'presentation/bloc/auth_cubit.dart';
+export 'presentation/pages/sign_in_page.dart';
+export 'presentation/widgets/sign_in_form_widget.dart';
+export 'presentation/widgets/sign_up_bottom_sheet_widget.dart';
+export 'presentation/widgets/sign_up_form_widget.dart';
+export 'utils/auth_errors_utils.dart';

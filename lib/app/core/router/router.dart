@@ -1,0 +1,10 @@
+export 'lib/core_router.dart';
+export 'lib/extensions/core_router_extension.dart';
+export 'lib/models/core_route.dart';
+export 'lib/models/core_route_base.dart';
+export 'lib/models/core_route_branch.dart';
+export 'lib/models/core_route_params.dart';
+export 'lib/models/core_route_stack.dart';
+export 'lib/providers/go_router_provider.dart';
+export 'lib/providers/router_provider.dart';
+export 'lib/widgets/core_router_scope.dart';

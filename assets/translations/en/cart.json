@@ -1,0 +1,37 @@
+{
+  "cart": {
+    "title": "Shopping Cart",
+    "summary": {
+      "total": "Total {count} {itemLabel}",
+      "item": "Item",
+      "items": "Items",
+      "price_usd": "USD {price}"
+    },
+    "empty": {
+      "title": "Your Cart is Empty",
+      "browse_products": "Browse Products"
+    },
+    "popular": {
+      "title": "Popular Products"
+    },
+    "actions": {
+      "checkout": "Checkout",
+      "sign_in": "Sign In",
+      "continue_guest": "Continue as Guest",
+      "retry": "Retry"
+    },
+    "auth_required": {
+      "title": "Sign In Required",
+      "message": "You need to be signed in to proceed to checkout."
+    },
+    "errors": {
+      "loading": "Error loading cart",
+      "local_get_failed": "Failed to get cart from local storage",
+      "local_save_failed": "Failed to save cart to local storage",
+      "local_clear_failed": "Failed to clear cart from local storage",
+      "remote_clear_failed": "Failed to clear cart",
+      "remote_get_failed": "Failed to get cart",
+      "remote_save_failed": "Failed to save cart"
+    }
+  }
+}

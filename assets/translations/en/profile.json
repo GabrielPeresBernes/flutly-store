@@ -1,0 +1,97 @@
+{
+  "profile": {
+    "title": "Profile",
+    "user": {
+      "guest": "Guest",
+      "sign_in_prompt": "Sign in to your account"
+    },
+    "sections": {
+      "general": "General",
+      "support": "Support",
+      "account": "Account"
+    },
+    "actions": {
+      "edit_profile": "Edit Profile",
+      "sign_out": "Sign Out",
+      "sign_in": "Sign In",
+      "report_bug": "Report a Bug",
+      "save": "Save",
+      "delete_account": "Delete Account"
+    },
+    "edit": {
+      "title": "Edit Profile",
+      "updated_success": "Profile updated successfully!"
+    },
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "current_password": "Current Password",
+      "new_password": "New Password",
+      "confirm_new_password": "Confirm New Password"
+    },
+    "validation": {
+      "name_required": "Name is required",
+      "password_min_length": "Password must be at least 6 characters",
+      "password_change_current": "Enter current password to change",
+      "password_change_new": "Enter new password to change",
+      "passwords_no_match": "Passwords do not match"
+    },
+    "errors": {
+      "load_user": "Error loading user data",
+      "not_authenticated": "User not authenticated.",
+      "report_bug_failed": "Failed to report bug. Please try again later."
+    },
+    "messages": {
+      "signed_out": "You have been signed out"
+    },
+    "report_bug": {
+      "title": "Report a Bug",
+      "success_message": "Thank you! Your report has been sent.",
+      "fields": {
+        "description_label": "What went wrong?",
+        "description_hint": "Describe the issue you encountered.",
+        "description_required": "Description is required",
+        "description_max_length": "Description must be at most {length} characters long",
+        "steps_label": "Steps to reproduce (Optional)",
+        "steps_empty": "No steps added yet. Tap \"Add Step\" to include steps.",
+        "expected_label": "What did you expect to happen? (Optional)",
+        "expected_hint": "Tell us what you expected instead.",
+        "issue_type_label": "Issue category (Optional)",
+        "issue_type_hint": "Select issue category",
+        "screen_label": "Where did this happen? (Optional)",
+        "screen_hint": "E.g.: Cart, Checkout, Login, Product page...",
+        "frequency_label": "How often does this happen? (Optional)",
+        "frequency_hint": "Select frequency"
+      },
+      "issue_types": {
+        "visual": "Visual issue",
+        "feature_not_working": "Feature not working",
+        "crash_freeze": "App crash or freeze",
+        "performance": "Performance issue",
+        "other": "Other"
+      },
+      "frequency_options": {
+        "once": "It happened once",
+        "sometimes": "It happens sometimes",
+        "every_time": "It happens every time"
+      },
+      "steps": {
+        "add": "Add Step",
+        "hint": "Describe step {number}"
+      },
+      "info": {
+        "usage": "The information you provide will be used only to improve the app.",
+        "sensitive": "Please do not include sensitive or personal information."
+      },
+      "actions": {
+        "send": "Send Report"
+      },
+      "auth_required": {
+        "title": "Sign In Required",
+        "message": "You need to be signed in to report a bug.",
+        "sign_in": "Sign In",
+        "cancel": "Cancel"
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+export 'infra/di/profile_module.dart';
+export 'infra/routes/edit_profile_route.dart';
+export 'infra/routes/profile_route.dart';
+export 'presentation/bloc/profile_cubit.dart';
+export 'presentation/pages/edit_profile_page.dart';
+export 'presentation/pages/profile_page.dart';
+export 'presentation/widgets/profile_item_widget.dart';
+export 'presentation/widgets/profile_section_widget.dart';

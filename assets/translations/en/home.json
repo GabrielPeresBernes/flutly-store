@@ -1,0 +1,10 @@
+{
+  "home": {
+    "visitor": "Visitor",
+    "greeting": "Hi, {name}",
+    "search_prompt": "What are you looking for today?",
+    "errors": {
+      "fetch_products_failed": "Failed to fetch home products"
+    }
+  }
+}

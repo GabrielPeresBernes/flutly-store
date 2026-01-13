@@ -1,0 +1,33 @@
+{
+  "search": {
+    "title": "Search",
+    "hint": "Search...",
+    "sections": {
+      "related_terms": "Related Terms",
+      "recent_searches": "Recent Searches",
+      "popular_products": "Popular Products"
+    },
+    "messages": {
+      "no_suggestions": "No suggestions found, but you can try searching for something else."
+    },
+    "errors": {
+      "suggestions_failed": "Failed to load search suggestions",
+      "popular_products_failed": "Failed to fetch popular products",
+      "save_term_failed": "Failed to save search term",
+      "remove_term_failed": "Failed to remove search term",
+      "get_terms_failed": "Failed to get search terms"
+    },
+    "suggestions": {
+      "amazon": "Amazon",
+      "apple": "Apple",
+      "beats": "Beats",
+      "monopod": "Monopod",
+      "iphone": "iPhone",
+      "pedestal": "Pedestal",
+      "selfie_stick": "Selfie Stick",
+      "case": "Case",
+      "watch": "Watch",
+      "airpods": "AirPods"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "checkout": {
+    "steps": {
+      "delivery": {
+        "title": "Delivery",
+        "action": "Proceed to Payment"
+      },
+      "payment": {
+        "title": "Payment",
+        "action": "Proceed to Review"
+      },
+      "review": {
+        "title": "Order Review",
+        "action": "Place Order"
+      },
+      "placing_order": {
+        "title": "Placing Order",
+        "action": ""
+      }
+    },
+    "order_status": {
+      "verifying": "Verifying Stock",
+      "processing": "Processing Payment",
+      "finalizing": "Finalizing Order",
+      "completed": "Order Completed"
+    },
+    "validation": {
+      "missing_info": "Some checkout information is missing."
+    },
+    "confirmation": {
+      "not_found": "Order not found",
+      "thank_you": "Thank you for buying with Flutly 🛍️",
+      "order_number": "Order #{id}",
+      "items_title": "Items"
+    },
+    "sections": {
+      "address": "Address",
+      "delivery": "Delivery",
+      "payment": "Payment",
+      "total": "Total",
+      "shipping": "Shipping",
+      "credit_card": "Credit Card"
+    },
+    "summary": {
+      "items": "{count} Items",
+      "price_usd": "USD {price}",
+      "free": "Free",
+      "card_mask": "•••• •••• •••• {last4}"
+    },
+    "actions": {
+      "new_address": "New Address",
+      "new_card": "New Card"
+    },
+    "placing_order": {
+      "processing_message": "We're confirming your order details...",
+      "completed_message": "All set! Your order is confirmed."
+    },
+    "sample_data": {
+      "address_home_title": "Home",
+      "address_home_street": "Zagrebačka ul. 4",
+      "address_home_city": "Poreč",
+      "address_home_zip": "52440",
+      "address_home_country": "Croatia",
+      "address_home_state": "Istria",
+      "address_office_title": "Office",
+      "address_office_street": "Ul. Lorenza Jagera 9",
+      "address_office_city": "Osijek",
+      "address_office_state": "Osijek-Baranja",
+      "address_office_zip": "31000",
+      "address_office_country": "Croatia",
+      "payment_personal_name": "Personal Card",
+      "payment_business_name": "Business Card",
+      "shipping_duration": "4 Days",
+      "shipping_name": "Normal"
+    }
+  }
+}

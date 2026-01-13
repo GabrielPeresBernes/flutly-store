@@ -1,0 +1,27 @@
+{
+  "product": {
+    "actions": {
+      "add_to_cart": "Add to Cart",
+      "continue_shopping": "Continue Shopping",
+      "view_cart": "View Cart"
+    },
+    "labels": {
+      "description": "Description"
+    },
+    "messages": {
+      "added": "Product Added"
+    },
+    "pricing": {
+      "price_usd": "USD {price}",
+      "discount": "{percent}% OFF"
+    },
+    "sections": {
+      "recommendations": "More Products"
+    },
+    "errors": {
+      "id_null": "Product ID is null",
+      "fetch_failed": "Failed to get product by id",
+      "recommendations_failed": "Failed to get product recommendations"
+    }
+  }
+}
