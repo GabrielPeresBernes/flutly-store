@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dio/dio.dart';
 
 import '../core_http.dart';
@@ -22,7 +24,7 @@ class DioProvider implements CoreHttp {
       options: Options(headers: headers),
     );
 
-    if (response.statusCode != 200 && response.statusCode != 201) {
+    if (!_isResponseSuccess(response)) {
       throw HttpException(
         'GET request failed',
         path: path,
@@ -49,7 +51,7 @@ class DioProvider implements CoreHttp {
       options: Options(headers: headers),
     );
 
-    if (response.statusCode != 200 && response.statusCode != 201) {
+    if (!_isResponseSuccess(response)) {
       throw HttpException(
         'POST request failed',
         path: path,
@@ -70,7 +72,7 @@ class DioProvider implements CoreHttp {
       options: Options(headers: headers),
     );
 
-    if (response.statusCode != 200 && response.statusCode != 201) {
+    if (!_isResponseSuccess(response)) {
       throw HttpException(
         'PUT request failed',
         path: path,
@@ -91,7 +93,7 @@ class DioProvider implements CoreHttp {
       options: Options(headers: headers),
     );
 
-    if (response.statusCode != 200 && response.statusCode != 201) {
+    if (!_isResponseSuccess(response)) {
       throw HttpException(
         'PATCH request failed',
         path: path,
@@ -110,7 +112,7 @@ class DioProvider implements CoreHttp {
       options: Options(headers: headers),
     );
 
-    if (response.statusCode != 200 && response.statusCode != 201) {
+    if (!_isResponseSuccess(response)) {
       throw HttpException(
         'DELETE request failed',
         path: path,
@@ -118,4 +120,9 @@ class DioProvider implements CoreHttp {
       );
     }
   }
+
+  bool _isResponseSuccess(Response<dynamic> response) =>
+      response.statusCode != null &&
+      response.statusCode! >= 200 &&
+      response.statusCode! < 300;
 }
