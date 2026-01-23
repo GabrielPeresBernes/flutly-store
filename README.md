@@ -136,6 +136,32 @@ Run on device or emulator:
 flutter run --dart-define-from-file=env.prod.json
 ```
 
+## 🧪 Running the Tests
+
+### Unit and Widget Tests
+
+```bash
+flutter test
+```
+
+These tests ensure that individual units of the code work as expected.
+
+### Test Coverage
+
+To evaluate the test coverage:
+
+```bash
+flutter test --coverage
+```
+
+Then, generate a coverage report:
+
+```bash
+genhtml coverage/lcov.info -o coverage/html
+```
+
+Open `index.html` in the coverage directory to view the report.
+
 ## 🎨 Assets & Localization
 
 - Assets: `assets/icons`, `assets/images`, `assets/splash`
