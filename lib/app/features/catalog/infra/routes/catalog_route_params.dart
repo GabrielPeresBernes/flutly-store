@@ -1,7 +1,9 @@
+import 'package:equatable/equatable.dart';
+
 import '../../../../core/router/router.dart';
 import '../../../../shared/utils/json_parser.dart';
 
-class CatalogRouteParams extends CoreRouteParams {
+class CatalogRouteParams extends CoreRouteParams with EquatableMixin {
   const CatalogRouteParams({required this.term});
 
   @override
@@ -15,4 +17,7 @@ class CatalogRouteParams extends CoreRouteParams {
 
   @override
   Map<String, dynamic> toJson() => {'term': term};
+
+  @override
+  List<Object?> get props => [term];
 }

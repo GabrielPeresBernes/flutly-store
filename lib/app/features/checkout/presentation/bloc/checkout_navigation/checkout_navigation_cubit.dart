@@ -1,11 +1,16 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:step_progress/step_progress.dart';
 
 part 'checkout_navigation_state.dart';
 
 enum CheckoutStep {
-  delivery('checkout.steps.delivery.title', 'checkout.steps.delivery.action', 0),
+  delivery(
+    'checkout.steps.delivery.title',
+    'checkout.steps.delivery.action',
+    0,
+  ),
   payment('checkout.steps.payment.title', 'checkout.steps.payment.action', 1),
   review('checkout.steps.review.title', 'checkout.steps.review.action', 2),
   placingOrder(

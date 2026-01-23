@@ -16,7 +16,7 @@ enum AuthProvider {
 }
 
 class Credentials {
-  Credentials({
+  const Credentials({
     required this.userId,
     required this.name,
     required this.email,

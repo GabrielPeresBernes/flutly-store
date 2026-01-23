@@ -5,7 +5,7 @@ import '../../../features/catalog/catalog.dart';
 import '../../../features/checkout/checkout.dart';
 import '../../../features/home/home.dart';
 import '../../../features/product/product.dart';
-import '../../../features/profile/infra/routes/report_but_route.dart';
+import '../../../features/profile/infra/routes/report_bug_route.dart';
 import '../../../features/profile/profile.dart';
 import '../../../features/search/search.dart';
 import '../../widgets/main_scaffold.dart';

@@ -5,13 +5,15 @@ import '../../core/injector/injector.dart';
 
 /// Utility class to provide platform and application information.
 class PlatformUtils {
-  PlatformUtils() {
-    _localPlatform = CoreInjector.instance.get<LocalPlatform>();
-    _packageInfo = CoreInjector.instance.get<PackageInfo>();
-  }
+  PlatformUtils({
+    PackageInfo? packageInfo,
+    LocalPlatform? localPlatform,
+  }) : _packageInfo = packageInfo ?? CoreInjector.instance.get<PackageInfo>(),
+       _localPlatform =
+           localPlatform ?? CoreInjector.instance.get<LocalPlatform>();
 
-  late LocalPlatform _localPlatform;
-  late PackageInfo _packageInfo;
+  final LocalPlatform _localPlatform;
+  final PackageInfo _packageInfo;
 
   String get operatingSystem => _localPlatform.operatingSystem;
 

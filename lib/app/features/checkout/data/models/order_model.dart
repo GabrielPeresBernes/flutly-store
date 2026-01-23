@@ -6,7 +6,7 @@ import 'payment_card_model.dart';
 import 'shipping_model.dart';
 
 class OrderModel {
-  OrderModel({
+  const OrderModel({
     required this.id,
     required this.address,
     required this.shipping,

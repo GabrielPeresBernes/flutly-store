@@ -4,7 +4,7 @@ import 'payment_card.dart';
 import 'shipping.dart';
 
 class Order {
-  Order({
+  const Order({
     required this.id,
     required this.address,
     required this.shipping,

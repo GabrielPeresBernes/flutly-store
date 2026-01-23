@@ -3,7 +3,7 @@ import '../../../../shared/utils/json_parser.dart';
 import '../../domain/entities/cart_product.dart';
 
 class CartProductModel with JsonSerializableMixin {
-  CartProductModel({
+  const CartProductModel({
     required this.id,
     required this.quantity,
     required this.thumbnail,

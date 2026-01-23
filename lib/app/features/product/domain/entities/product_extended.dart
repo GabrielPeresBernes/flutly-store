@@ -1,7 +1,7 @@
 import 'product.dart';
 
 class ProductExtended extends Product {
-  ProductExtended({
+  const ProductExtended({
     required super.id,
     required super.title,
     required super.thumbnail,

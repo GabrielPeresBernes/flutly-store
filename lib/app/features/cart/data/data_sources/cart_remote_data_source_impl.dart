@@ -10,7 +10,7 @@ import '../models/cart_model.dart';
 import 'cart_remote_data_source.dart';
 
 class CartRemoteDataSourceImpl implements CartRemoteDataSource {
-  CartRemoteDataSourceImpl(this._firebaseFirestore);
+  const CartRemoteDataSourceImpl(this._firebaseFirestore);
 
   final FirebaseFirestore _firebaseFirestore;
 

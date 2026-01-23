@@ -5,7 +5,7 @@ import '../../domain/repositories/product_repository.dart';
 import '../data_sources/product_remote_data_source.dart';
 
 class ProductRepositoryImpl implements ProductRepository {
-  ProductRepositoryImpl(this._remoteDataSource);
+  const ProductRepositoryImpl(this._remoteDataSource);
 
   final ProductRemoteDataSource _remoteDataSource;
 

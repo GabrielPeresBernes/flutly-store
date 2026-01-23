@@ -1,5 +1,5 @@
 class BugReport {
-  BugReport({
+  const BugReport({
     required this.description,
     this.stepsToReproduce,
     this.expectedBehavior,

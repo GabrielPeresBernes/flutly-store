@@ -52,6 +52,8 @@ class _CatalogPageState extends State<CatalogPage> {
     final catalogUtils = CatalogUtils(context);
 
     return BlocListener<CatalogFiltersCubit, CatalogFiltersState>(
+      listenWhen: (previous, current) =>
+          current is CatalogFiltersApplied || current is CatalogFiltersEmpty,
       listener: (context, state) {
         _scrollController.jumpTo(0);
         catalogBloc.add(

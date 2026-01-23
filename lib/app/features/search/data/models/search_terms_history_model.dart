@@ -1,7 +1,7 @@
 import '../../../../core/local_storage/local_storage.dart';
 
 class SearchTermsHistoryModel with JsonSerializableMixin {
-  SearchTermsHistoryModel({required this.terms});
+  const SearchTermsHistoryModel({required this.terms});
 
   factory SearchTermsHistoryModel.fromJson(Map<String, dynamic> json) {
     final termsFromJson =

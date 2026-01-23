@@ -1,5 +1,5 @@
 class HomeProduct {
-  HomeProduct({
+  const HomeProduct({
     required this.id,
     required this.title,
     required this.image,

@@ -2,7 +2,7 @@ import '../../../../shared/utils/json_parser.dart';
 import '../../domain/entities/home_product.dart';
 
 class HomeProductModel {
-  HomeProductModel({
+  const HomeProductModel({
     required this.id,
     required this.title,
     required this.price,

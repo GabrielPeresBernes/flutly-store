@@ -1,5 +1,5 @@
 class ProductFilters {
-  ProductFilters({
+  const ProductFilters({
     this.sortBy,
     this.order,
     this.minPrice,

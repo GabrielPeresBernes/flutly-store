@@ -10,7 +10,7 @@ import '../models/product_extended_model.dart';
 import 'product_remote_data_source.dart';
 
 class ProductRemoteDataSourceImpl implements ProductRemoteDataSource {
-  ProductRemoteDataSourceImpl(this._httpClient);
+  const ProductRemoteDataSourceImpl(this._httpClient);
 
   final CoreHttp _httpClient;
 

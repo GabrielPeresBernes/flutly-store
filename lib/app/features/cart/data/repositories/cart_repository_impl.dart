@@ -10,7 +10,7 @@ import '../data_sources/cart_remote_data_source.dart';
 import '../models/cart_model.dart';
 
 class CartRepositoryImpl implements CartRepository {
-  CartRepositoryImpl(
+  const CartRepositoryImpl(
     this._authLocalDataSource,
     this._cartRemoteDataSource,
     this._cartLocalDataSource,

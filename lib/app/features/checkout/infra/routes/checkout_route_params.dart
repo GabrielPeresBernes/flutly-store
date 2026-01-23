@@ -3,7 +3,7 @@ import '../../data/models/order_model.dart';
 import '../../domain/entities/order.dart';
 
 class CheckoutRouteParams extends CoreRouteParams {
-  CheckoutRouteParams({required this.order});
+  const CheckoutRouteParams({required this.order});
 
   factory CheckoutRouteParams.fromJson(Map<String, dynamic> data) {
     return CheckoutRouteParams(

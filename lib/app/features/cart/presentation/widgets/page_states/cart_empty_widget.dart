@@ -53,65 +53,81 @@ class _CartEmptyWidgetState extends State<CartEmptyWidget> {
           showLeading: false,
         ),
         body: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Expanded(child: SizedBox(height: 30)),
-              const Padding(
-                padding: EdgeInsets.only(right: 4),
-                child: AppIconWidget.svgAsset('box_empty', size: 120),
-              ),
-              const SizedBox(height: 20),
-              Text(
-                'cart.empty.title'.tr(),
-                style: context.bodyLarge,
-              ),
-              const Spacer(),
-              SizedBox(
-                width: 195,
-                child: AppElevatedButtonWidget(
-                  onPressed: () => context.read<AppCubit>().navigateToTab(
-                    BottomNavigatorTab.home,
-                  ),
-                  label: 'cart.empty.browse_products'.tr(),
-                ),
-              ),
-              const Spacer(),
-              Container(
-                width: double.infinity,
-                padding: EdgeInsets.fromLTRB(
-                  24,
-                  28,
-                  24,
-                  context.bottomBarOffset,
-                ),
-                decoration: const BoxDecoration(color: AppColors.gray400),
-                child:
-                    BlocBuilder<
-                      CartPopularProductsCubit,
-                      CartPopularProductsState
-                    >(
-                      builder: (context, state) => AnimatedSwitcher(
-                        duration: const Duration(milliseconds: 300),
-                        transitionBuilder: (child, animation) => FadeTransition(
-                          opacity: animation,
-                          child: child,
-                        ),
-                        child: switch (state) {
-                          CartPopularProductsLoading() ||
-                          CartPopularProductsInitial() =>
-                            const PopularProductsLoadingWidget(),
-                          CartPopularProductsLoaded(:final products) =>
-                            PopularProductsLoadedWidget(products: products),
-                          CartPopularProductsFailure(:final exception) =>
-                            PopularProductsFailureWidget(
-                              exception: exception,
-                            ),
-                        },
+          child: LayoutBuilder(
+            builder: (context, constraints) => SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                child: IntrinsicHeight(
+                  child: Column(
+                    children: [
+                      const Expanded(child: SizedBox(height: 30)),
+                      const Padding(
+                        padding: EdgeInsets.only(right: 4),
+                        child: AppIconWidget.svgAsset('box_empty', size: 120),
                       ),
-                    ),
+                      const SizedBox(height: 20),
+                      Text(
+                        'cart.empty.title'.tr(),
+                        style: context.bodyLarge,
+                      ),
+                      const Spacer(),
+                      SizedBox(
+                        width: 195,
+                        child: AppElevatedButtonWidget(
+                          onPressed: () =>
+                              context.read<AppCubit>().navigateToTab(
+                                BottomNavigatorTab.home,
+                              ),
+                          label: 'cart.empty.browse_products'.tr(),
+                        ),
+                      ),
+                      const Spacer(),
+                      Container(
+                        width: double.infinity,
+                        padding: EdgeInsets.fromLTRB(
+                          24,
+                          28,
+                          24,
+                          context.bottomBarOffset,
+                        ),
+                        decoration: const BoxDecoration(
+                          color: AppColors.gray400,
+                        ),
+                        child:
+                            BlocBuilder<
+                              CartPopularProductsCubit,
+                              CartPopularProductsState
+                            >(
+                              builder: (context, state) => AnimatedSwitcher(
+                                duration: const Duration(milliseconds: 300),
+                                transitionBuilder: (child, animation) =>
+                                    FadeTransition(
+                                      opacity: animation,
+                                      child: child,
+                                    ),
+                                child: switch (state) {
+                                  CartPopularProductsLoading() ||
+                                  CartPopularProductsInitial() =>
+                                    const PopularProductsLoadingWidget(),
+                                  CartPopularProductsLoaded(:final products) =>
+                                    PopularProductsLoadedWidget(
+                                      products: products,
+                                    ),
+                                  CartPopularProductsFailure(
+                                    :final exception,
+                                  ) =>
+                                    PopularProductsFailureWidget(
+                                      exception: exception,
+                                    ),
+                                },
+                              ),
+                            ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
-            ],
+            ),
           ),
         ),
       ),

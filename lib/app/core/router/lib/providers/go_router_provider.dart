@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:animations/animations.dart';
+import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 import '../models/core_route.dart';
@@ -34,40 +35,10 @@ class GoRouterProvider implements RouterProvider {
 
       return GoRoute(
         path: coreRoute.path,
-        builder: (context, state) {
-          final params = state.extra == null
-              ? null
-              : coreRoute.paramsDecoder.call(
-                  state.extra! as Map<String, dynamic>,
-                );
-
-          return coreRoute.builder(context, params);
-        },
+        builder: (context, state) =>
+            coreRoute.builder(context, _getParams(state, coreRoute)),
         pageBuilder: !Platform.isIOS && coreRoute.transitionAnimation != null
-            ? (context, state) {
-                final params = state.extra == null
-                    ? null
-                    : coreRoute.paramsDecoder.call(
-                        state.extra! as Map<String, dynamic>,
-                      );
-
-                return switch (coreRoute.transitionAnimation!) {
-                  TransitionAnimation.sharedAxisScaled =>
-                    CustomTransitionPage<void>(
-                      key: state.pageKey,
-                      child: coreRoute.builder(context, params),
-                      transitionsBuilder:
-                          (context, animation, secondaryAnimation, child) {
-                            return SharedAxisTransition(
-                              animation: animation,
-                              secondaryAnimation: secondaryAnimation,
-                              transitionType: SharedAxisTransitionType.scaled,
-                              child: child,
-                            );
-                          },
-                    ),
-                };
-              }
+            ? (context, state) => _buildPage(context, coreRoute, state)
             : null,
         routes: coreRoute.subRoutes.map(_buildRoute).toList(),
       );
@@ -82,7 +53,7 @@ class GoRouterProvider implements RouterProvider {
               ),
             )
             .toList(),
-        builder: (context, state, navigationShell) => coreRoute.builder(
+        builder: (_, state, navigationShell) => coreRoute.builder(
           navigationShell,
           navigationShell.currentIndex,
           (index) => navigationShell.goBranch(
@@ -90,7 +61,7 @@ class GoRouterProvider implements RouterProvider {
             initialLocation: index == navigationShell.currentIndex,
           ),
         ),
-        navigatorContainerBuilder: (context, navigationShell, children) =>
+        navigatorContainerBuilder: (_, navigationShell, children) =>
             IndexedStackedRouteBranchContainer(
               currentIndex: navigationShell.currentIndex,
               children: children,
@@ -142,4 +113,27 @@ class GoRouterProvider implements RouterProvider {
 
     return decoder(extra)! as T;
   }
+
+  CoreRouteParams? _getParams(GoRouterState state, CoreRoute coreRoute) =>
+      state.extra == null
+      ? null
+      : coreRoute.paramsDecoder.call(state.extra! as Map<String, dynamic>);
+
+  Page<dynamic> _buildPage(
+    BuildContext context,
+    CoreRoute coreRoute,
+    GoRouterState state,
+  ) => switch (coreRoute.transitionAnimation!) {
+    TransitionAnimation.sharedAxisScaled => CustomTransitionPage<void>(
+      key: state.pageKey,
+      child: coreRoute.builder(context, _getParams(state, coreRoute)),
+      transitionsBuilder: (_, animation, secondaryAnimation, child) =>
+          SharedAxisTransition(
+            animation: animation,
+            secondaryAnimation: secondaryAnimation,
+            transitionType: SharedAxisTransitionType.scaled,
+            child: child,
+          ),
+    ),
+  };
 }

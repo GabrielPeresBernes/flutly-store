@@ -26,17 +26,17 @@ import 'firebase_module.dart';
 
 /// Application dependency injection module
 class AppModule extends InjectorModule {
-  AppModule();
+  const AppModule();
 
-  final modules = [
-    const AuthModule(),
-    const HomeModule(),
-    const SearchModule(),
-    const CatalogModule(),
-    const CartModule(),
-    const ProductModule(),
-    const CheckoutModule(),
-    const ProfileModule(),
+  static const modules = [
+    AuthModule(),
+    HomeModule(),
+    SearchModule(),
+    CatalogModule(),
+    CartModule(),
+    ProductModule(),
+    CheckoutModule(),
+    ProfileModule(),
   ];
 
   @override

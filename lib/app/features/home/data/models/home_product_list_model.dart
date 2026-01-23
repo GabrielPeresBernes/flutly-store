@@ -3,7 +3,7 @@ import '../../domain/entities/home_product_list.dart';
 import 'home_product_model.dart';
 
 class HomeProductListModel {
-  HomeProductListModel({
+  const HomeProductListModel({
     required this.title,
     required this.products,
     required this.variant,

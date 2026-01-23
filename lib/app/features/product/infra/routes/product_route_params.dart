@@ -2,7 +2,7 @@ import '../../../../core/router/router.dart';
 import '../../../../shared/utils/json_parser.dart';
 
 class ProductRouteParams extends CoreRouteParams {
-  ProductRouteParams({
+  const ProductRouteParams({
     required this.id,
     required this.title,
     required this.thumbnail,

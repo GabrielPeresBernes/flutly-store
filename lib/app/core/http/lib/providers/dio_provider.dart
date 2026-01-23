@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:dio/dio.dart';
 
 import '../core_http.dart';
@@ -7,7 +5,7 @@ import '../errors/http_exception.dart';
 
 /// Dio implementation of the CoreHttp interface.
 class DioProvider implements CoreHttp {
-  DioProvider(this._dio);
+  const DioProvider(this._dio);
 
   final Dio _dio;
 

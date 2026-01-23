@@ -1,5 +1,5 @@
 class CartProduct {
-  CartProduct({
+  const CartProduct({
     required this.id,
     required this.quantity,
     required this.thumbnail,

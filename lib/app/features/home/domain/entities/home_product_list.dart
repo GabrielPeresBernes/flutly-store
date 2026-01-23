@@ -17,7 +17,7 @@ enum HomeProductListType {
 }
 
 class HomeProductList {
-  HomeProductList({
+  const HomeProductList({
     required this.title,
     required this.products,
     required this.type,

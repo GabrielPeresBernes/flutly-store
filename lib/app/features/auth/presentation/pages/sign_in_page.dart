@@ -17,7 +17,12 @@ import '../../auth.dart';
 import '../widgets/social_sign_in_button_widget.dart';
 
 class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
+  const SignInPage({
+    super.key,
+    this.isIOSOverrideForTesting,
+  });
+
+  final bool? isIOSOverrideForTesting;
 
   @override
   Widget build(BuildContext context) {
@@ -156,7 +161,7 @@ class SignInPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               spacing: 12,
                               children: [
-                                if (Platform.isIOS)
+                                if (isIOSOverrideForTesting ?? Platform.isIOS)
                                   SocialSignInButtonWidget(
                                     icon: 'apple',
                                     onPressed: () => cubit.signInWithProvider(

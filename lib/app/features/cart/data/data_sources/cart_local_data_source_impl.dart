@@ -9,7 +9,7 @@ import '../models/cart_model.dart';
 import 'cart_local_data_source.dart';
 
 class CartLocalDataSourceImpl implements CartLocalDataSource {
-  CartLocalDataSourceImpl(this._localStorage);
+  const CartLocalDataSourceImpl(this._localStorage);
 
   final CoreLocalStorage _localStorage;
 

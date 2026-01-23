@@ -1,9 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:reactive_forms/reactive_forms.dart';
 
 import '../../../../shared/errors/app_exception.dart';
 import '../../domain/entities/credentials.dart';
 import '../../domain/repositories/auth_repository.dart';
+import '../../utils/auth_utils.dart';
 
 part 'auth_state.dart';
 
@@ -12,26 +12,9 @@ class AuthCubit extends Cubit<AuthState> {
 
   final AuthRepository _authRepository;
 
-  final signInForm = FormGroup({
-    'email': FormControl<String>(),
-    'password': FormControl<String>(),
-  });
+  final signInForm = AuthUtils.buildSignInForm();
 
-  final signUpForm = FormGroup(
-    {
-      'name': FormControl<String>(validators: [Validators.required]),
-      'email': FormControl<String>(
-        validators: [Validators.required, Validators.email],
-      ),
-      'password': FormControl<String>(
-        validators: [Validators.required, Validators.minLength(6)],
-      ),
-      'confirmPassword': FormControl<String>(),
-    },
-    validators: [
-      const MustMatchValidator('password', 'confirmPassword', false),
-    ],
-  );
+  final signUpForm = AuthUtils.buildSignUpForm();
 
   Future<void> signUpWithEmail() async {
     signUpForm.markAllAsTouched();

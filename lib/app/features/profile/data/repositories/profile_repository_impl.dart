@@ -1,8 +1,6 @@
-import 'package:fpdart/fpdart.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 import '../../../../shared/errors/app_exception.dart';
-import '../../../../shared/extensions/task_either_extension.dart';
 import '../../../../shared/types/response_type.dart';
 import '../../../auth/auth.dart';
 import '../../domain/entities/bug_report.dart';
@@ -11,7 +9,10 @@ import '../data_sources/profile_remote_data_source.dart';
 import '../models/bug_report_model.dart';
 
 class ProfileRepositoryImpl implements ProfileRepository {
-  ProfileRepositoryImpl(this._remoteDataSource, this._authLocalDataSource);
+  const ProfileRepositoryImpl(
+    this._remoteDataSource,
+    this._authLocalDataSource,
+  );
 
   final ProfileRemoteDataSource _remoteDataSource;
   final AuthLocalDataSource _authLocalDataSource;

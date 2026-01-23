@@ -2,7 +2,7 @@ import '../../../../shared/utils/json_parser.dart';
 import '../../domain/entities/shipping.dart';
 
 class ShippingModel {
-  ShippingModel({
+  const ShippingModel({
     required this.name,
     required this.cost,
     required this.duration,

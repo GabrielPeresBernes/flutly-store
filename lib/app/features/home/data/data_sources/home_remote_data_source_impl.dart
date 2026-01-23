@@ -9,7 +9,7 @@ import '../models/home_product_list_model.dart';
 import 'home_remote_data_source.dart';
 
 class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
-  HomeRemoteDataSourceImpl(this._http);
+  const HomeRemoteDataSourceImpl(this._http);
 
   final CoreHttp _http;
 

@@ -4,14 +4,22 @@ import 'package:fpdart/fpdart.dart';
 import '../../features/auth/auth.dart';
 import '../constants/bottom_navigator_tabs.dart';
 import '../errors/app_exception.dart';
+import '../utils/platform_utils.dart';
 
 part 'app_state.dart';
 
 /// Global application cubit for managing app state
 class AppCubit extends Cubit<AppState> {
-  AppCubit(this._authRepository) : super(const AppInitial());
+  AppCubit(
+    this._authRepository, {
+    PlatformUtils? platformUtils,
+  }) : _platformUtils = platformUtils ?? PlatformUtils(),
+       super(const AppInitial());
 
   final AuthRepository _authRepository;
+  final PlatformUtils _platformUtils;
+
+  String get appFullVersion => _platformUtils.fullAppVersion;
 
   bool? _isUserAuthenticated;
 

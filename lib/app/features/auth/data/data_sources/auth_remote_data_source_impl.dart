@@ -16,7 +16,7 @@ import '../models/credentials_model.dart';
 import 'auth_remote_data_source.dart';
 
 class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
-  AuthRemoteDataSourceImpl(this._firebaseAuth, this._googleSignIn);
+  const AuthRemoteDataSourceImpl(this._firebaseAuth, this._googleSignIn);
 
   final FirebaseAuth _firebaseAuth;
   final GoogleSignIn _googleSignIn;

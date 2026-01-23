@@ -9,9 +9,13 @@ import '../models/bug_report_model.dart';
 import 'profile_remote_data_source.dart';
 
 class ProfileRemoteDataSourceImpl implements ProfileRemoteDataSource {
-  ProfileRemoteDataSourceImpl(this._firebaseFirestore);
+  ProfileRemoteDataSourceImpl(
+    this._firebaseFirestore, {
+    PlatformUtils? platformUtils,
+  }) : _platformUtils = platformUtils ?? PlatformUtils();
 
   final FirebaseFirestore _firebaseFirestore;
+  final PlatformUtils _platformUtils;
 
   @override
   TaskResponse<void> reportBug(
@@ -19,17 +23,15 @@ class ProfileRemoteDataSourceImpl implements ProfileRemoteDataSource {
     CredentialsModel credentials,
   ) => task(
     () async {
-      final platform = PlatformUtils();
-
       final ref = _firebaseFirestore.collection('bug_reports').doc();
 
       await ref.set({
         ...bugReport.toJson(),
         'reportedAt': FieldValue.serverTimestamp(),
-        'platform': platform.operatingSystem,
-        'osVersion': platform.operatingSystemVersion,
-        'appVersion': platform.appVersion,
-        'buildNumber': platform.buildNumber,
+        'platform': _platformUtils.operatingSystem,
+        'osVersion': _platformUtils.operatingSystemVersion,
+        'appVersion': _platformUtils.appVersion,
+        'buildNumber': _platformUtils.buildNumber,
         'userId': credentials.userId,
       });
     },

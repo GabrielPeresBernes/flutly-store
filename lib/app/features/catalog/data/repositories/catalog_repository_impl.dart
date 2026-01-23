@@ -5,7 +5,7 @@ import '../../domain/repositories/catalog_repository.dart';
 import '../data_sources/catalog_remote_data_source.dart';
 
 class CatalogRepositoryImpl implements CatalogRepository {
-  CatalogRepositoryImpl(this._remoteDataSource);
+  const CatalogRepositoryImpl(this._remoteDataSource);
 
   final CatalogRemoteDataSource _remoteDataSource;
 

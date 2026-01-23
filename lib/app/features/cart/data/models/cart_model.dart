@@ -6,7 +6,7 @@ import '../../domain/entities/cart.dart';
 import 'cart_product_model.dart';
 
 class CartModel with JsonSerializableMixin {
-  CartModel({
+  const CartModel({
     required this.totalPrice,
     required this.totalItems,
     required this.products,

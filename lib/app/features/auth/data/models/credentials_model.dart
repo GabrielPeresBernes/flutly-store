@@ -3,7 +3,7 @@ import '../../../../shared/utils/json_parser.dart';
 import '../../domain/entities/credentials.dart';
 
 class CredentialsModel with JsonSerializableMixin {
-  CredentialsModel({
+  const CredentialsModel({
     required this.userId,
     required this.name,
     required this.email,

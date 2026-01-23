@@ -12,7 +12,11 @@ TaskResponse<T> task<T>(
 ) => TaskEither.tryCatch(
   run,
   (error, stackTrace) {
-    FirebaseCrashlytics.instance.recordError(error, stackTrace);
+    try {
+      FirebaseCrashlytics.instance.recordError(error, stackTrace);
+    } catch (_) {
+      /* Ignore Crashlytics errors */
+    }
 
     return AppException(
       message: onError(error),

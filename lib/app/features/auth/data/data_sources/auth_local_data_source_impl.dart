@@ -4,13 +4,12 @@ import 'package:fpdart/fpdart.dart';
 import '../../../../core/local_storage/local_storage.dart';
 import '../../../../shared/types/response_type.dart';
 import '../../../../shared/utils/task_utils.dart';
+import '../../constants/auth_constants.dart';
 import '../models/credentials_model.dart';
 import 'auth_local_data_source.dart';
 
-const _key = 'user';
-
 class AuthLocalDataSourceImpl implements AuthLocalDataSource {
-  AuthLocalDataSourceImpl(this._localStorage);
+  const AuthLocalDataSourceImpl(this._localStorage);
 
   final CoreLocalStorage _localStorage;
 
@@ -18,7 +17,7 @@ class AuthLocalDataSourceImpl implements AuthLocalDataSource {
   TaskResponse<void> saveCredentials(CredentialsModel credentials) => task(
     () async {
       return _localStorage.secureStorage.set(
-        _key,
+        AuthConstants.userKey,
         credentials,
       );
     },
@@ -29,7 +28,7 @@ class AuthLocalDataSourceImpl implements AuthLocalDataSource {
   TaskResponse<Option<CredentialsModel>> getCredentials() => task(
     () async {
       final data = await _localStorage.secureStorage.get<CredentialsModel>(
-        _key,
+        AuthConstants.userKey,
         CredentialsModel.fromJson,
       );
 
@@ -40,14 +39,14 @@ class AuthLocalDataSourceImpl implements AuthLocalDataSource {
 
   @override
   TaskResponse<void> clearCredentials() => task(
-    () async => _localStorage.secureStorage.remove(_key),
+    () async => _localStorage.secureStorage.remove(AuthConstants.userKey),
     (_) => tr('auth.errors.clear_credentials_failed'),
   );
 
   @override
   Future<bool> isAuthenticated() async {
     final credentials = await _localStorage.secureStorage.get<CredentialsModel>(
-      _key,
+      AuthConstants.userKey,
       CredentialsModel.fromJson,
     );
     return credentials != null;

@@ -1,3 +1,4 @@
+import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -8,7 +9,7 @@ import '../../presentation/bloc/catalog_filters_cubit.dart';
 import '../../presentation/pages/catalog_page.dart';
 import 'catalog_route_params.dart';
 
-class CatalogRoute extends CoreRoute<CatalogRouteParams> {
+class CatalogRoute extends CoreRoute<CatalogRouteParams> with EquatableMixin {
   const CatalogRoute();
 
   @override
@@ -30,4 +31,7 @@ class CatalogRoute extends CoreRoute<CatalogRouteParams> {
     ],
     child: const CatalogPage(),
   );
+
+  @override
+  List<Object?> get props => [path];
 }

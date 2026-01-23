@@ -3,7 +3,7 @@ import '../../domain/entities/products_page.dart';
 import 'product_model.dart';
 
 class ProductsPageModel {
-  ProductsPageModel({
+  const ProductsPageModel({
     required this.products,
     required this.total,
     required this.skip,

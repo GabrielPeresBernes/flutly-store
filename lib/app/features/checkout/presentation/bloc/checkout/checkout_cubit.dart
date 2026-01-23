@@ -25,11 +25,14 @@ enum OrderStatus {
 }
 
 class CheckoutCubit extends Cubit<CheckoutState> {
-  CheckoutCubit() : super(const CheckoutInitial());
+  CheckoutCubit({this.checkoutStepDelay = const Duration(seconds: 2)})
+    : super(const CheckoutInitial());
 
   Address? _selectedAddress;
   Shipping? _selectedShipping;
   PaymentCard? _selectedPayment;
+
+  final Duration checkoutStepDelay;
 
   void selectAddress(Address address) {
     _selectedAddress = address;
@@ -74,7 +77,7 @@ class CheckoutCubit extends Cubit<CheckoutState> {
 
     // Simulate order placement process
     for (final status in OrderStatus.values.skip(1)) {
-      await Future<void>.delayed(const Duration(seconds: 2));
+      await Future<void>.delayed(checkoutStepDelay);
 
       if (status == OrderStatus.completed) {
         emit(

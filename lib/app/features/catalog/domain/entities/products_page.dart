@@ -1,7 +1,7 @@
 import '../../../product/domain/entities/product.dart';
 
 class ProductsPage {
-  ProductsPage({
+  const ProductsPage({
     required this.products,
     required this.total,
     required this.skip,

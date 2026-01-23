@@ -1,7 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:reactive_forms/reactive_forms.dart';
-import 'package:easy_localization/easy_localization.dart';
 
 import '../../../../shared/extensions/layout_extension.dart';
 import '../../../../shared/extensions/show_app_snack_bar_extension.dart';

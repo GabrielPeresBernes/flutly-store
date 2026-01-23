@@ -1,7 +1,7 @@
 import '../../domain/entities/bug_report.dart';
 
 class BugReportModel {
-  BugReportModel({
+  const BugReportModel({
     required this.description,
     this.stepsToReproduce,
     this.expectedBehavior,

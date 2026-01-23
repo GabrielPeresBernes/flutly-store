@@ -73,7 +73,7 @@ class CatalogFiltersCubit extends Cubit<CatalogFiltersState> {
     selectedSortOption = SortOption.unsorted;
     minPrice = '';
     maxPrice = '';
-    emit(const CatalogFiltersInitial());
+    emit(const CatalogFiltersEmpty());
   }
 
   int get appliedFiltersCount {

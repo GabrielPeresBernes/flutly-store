@@ -16,7 +16,7 @@ enum CardBrand {
 }
 
 class PaymentCard {
-  PaymentCard({
+  const PaymentCard({
     required this.name,
     required this.last4Digits,
     required this.expirationDate,

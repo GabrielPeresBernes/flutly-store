@@ -8,7 +8,7 @@ import '../../../catalog/data/models/products_page_model.dart';
 import 'search_remote_data_source.dart';
 
 class SearchRemoteDataSourceImpl implements SearchRemoteDataSource {
-  SearchRemoteDataSourceImpl(this._httpClient);
+  const SearchRemoteDataSourceImpl(this._httpClient);
 
   final CoreHttp _httpClient;
 

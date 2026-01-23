@@ -9,7 +9,7 @@ import '../models/products_page_model.dart';
 import 'catalog_remote_data_source.dart';
 
 class CatalogRemoteDataSourceImpl implements CatalogRemoteDataSource {
-  CatalogRemoteDataSourceImpl(this._httpClient);
+  const CatalogRemoteDataSourceImpl(this._httpClient);
 
   final CoreHttp _httpClient;
 

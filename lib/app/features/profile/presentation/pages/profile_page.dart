@@ -8,23 +8,20 @@ import '../../../../shared/bloc/app_cubit.dart';
 import '../../../../shared/extensions/show_app_bottom_sheet_extension.dart';
 import '../../../../shared/extensions/text_theme_extension.dart';
 import '../../../../shared/theme/tokens/color_tokens.dart';
-import '../../../../shared/utils/platform_utils.dart';
 import '../../../../shared/widgets/app_icon_widget.dart';
 import '../../../../shared/widgets/navigation_bars/app_top_navigation_bar.dart';
 import '../../../auth/infra/routes/auth_route.dart';
 import '../../constants/profile_constants.dart';
-import '../../infra/routes/edit_profile_route.dart';
-import '../../infra/routes/report_but_route.dart';
+import '../../infra/routes/report_bug_route.dart';
+import '../../profile.dart';
 import '../widgets/profile_bottom_sheet_unauthenticated_widget.dart';
-import '../widgets/profile_item_widget.dart';
-import '../widgets/profile_section_widget.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final platform = PlatformUtils();
+    final cubit = context.read<AppCubit>();
 
     return Scaffold(
       appBar: AppTopNavigationBar(
@@ -195,7 +192,7 @@ class ProfilePage extends StatelessWidget {
                         ),
                         const Spacer(),
                         Text(
-                          platform.fullAppVersion,
+                          cubit.appFullVersion,
                           style: context.bodyMedium.copyWith(
                             color: AppColors.gray100,
                           ),

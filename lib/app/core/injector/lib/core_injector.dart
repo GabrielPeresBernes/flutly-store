@@ -3,7 +3,7 @@ import 'providers/injector_provider.dart';
 
 /// Core Injector for dependency injection.
 class CoreInjector {
-  CoreInjector._(this._provider);
+  const CoreInjector._(this._provider);
 
   static CoreInjector? _instance;
 

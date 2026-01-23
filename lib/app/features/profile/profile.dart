@@ -4,5 +4,7 @@ export 'infra/routes/profile_route.dart';
 export 'presentation/bloc/profile_cubit.dart';
 export 'presentation/pages/edit_profile_page.dart';
 export 'presentation/pages/profile_page.dart';
+export 'presentation/pages/report_bug_page.dart';
+export 'presentation/widgets/dynamic_list_field_widget.dart';
 export 'presentation/widgets/profile_item_widget.dart';
 export 'presentation/widgets/profile_section_widget.dart';

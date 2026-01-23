@@ -2,7 +2,7 @@ import '../../../../shared/utils/json_parser.dart';
 import '../../domain/entities/payment_card.dart';
 
 class PaymentCardModel {
-  PaymentCardModel({
+  const PaymentCardModel({
     required this.name,
     required this.last4Digits,
     required this.expirationDate,

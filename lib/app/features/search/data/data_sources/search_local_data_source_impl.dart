@@ -9,7 +9,7 @@ import '../models/search_terms_history_model.dart';
 import 'search_local_data_source.dart';
 
 class SearchLocalDataSourceImpl implements SearchLocalDataSource {
-  SearchLocalDataSourceImpl(this._localStorage);
+  const SearchLocalDataSourceImpl(this._localStorage);
 
   final CoreLocalStorage _localStorage;
 

@@ -2,7 +2,7 @@ import '../../../../shared/utils/json_parser.dart';
 import '../../domain/entities/product_extended.dart';
 
 class ProductExtendedModel {
-  ProductExtendedModel({
+  const ProductExtendedModel({
     required this.id,
     required this.title,
     required this.thumbnail,

@@ -1,5 +1,5 @@
 class Shipping {
-  Shipping({
+  const Shipping({
     required this.name,
     required this.cost,
     required this.duration,

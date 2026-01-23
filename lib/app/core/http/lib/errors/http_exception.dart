@@ -11,7 +11,6 @@ class HttpException implements Exception {
   final String? path;
 
   @override
-  String toString() {
-    return 'HttpException: $message (Status code: $statusCode) (Path: $path)';
-  }
+  String toString() =>
+      'HttpException: $message (Status code: $statusCode) (Path: $path)';
 }

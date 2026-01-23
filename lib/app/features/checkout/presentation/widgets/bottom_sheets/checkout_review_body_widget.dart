@@ -30,11 +30,7 @@ class _CheckoutReviewBodyWidgetState extends State<CheckoutReviewBodyWidget> {
     return BlocBuilder<CheckoutCubit, CheckoutState>(
       builder: (context, state) {
         return switch (state) {
-          CheckoutValidated(
-            :final address,
-            :final shipping,
-            :final payment,
-          ) =>
+          CheckoutValidated(:final address, :final shipping, :final payment) =>
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

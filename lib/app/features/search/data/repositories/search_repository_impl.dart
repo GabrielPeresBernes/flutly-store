@@ -5,7 +5,7 @@ import '../data_sources/search_local_data_source.dart';
 import '../data_sources/search_remote_data_source.dart';
 
 class SearchRepositoryImpl implements SearchRepository {
-  SearchRepositoryImpl(
+  const SearchRepositoryImpl(
     this._remoteDataSource,
     this._localDataSource,
   );

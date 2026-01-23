@@ -17,3 +17,7 @@ final class CatalogFiltersInitial extends CatalogFiltersState {
 final class CatalogFiltersApplied extends CatalogFiltersState {
   const CatalogFiltersApplied({required super.filters});
 }
+
+final class CatalogFiltersEmpty extends CatalogFiltersState {
+  const CatalogFiltersEmpty() : super(filters: null);
+}

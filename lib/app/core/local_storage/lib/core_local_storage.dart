@@ -2,7 +2,7 @@ import 'providers/local_storage_provider.dart';
 
 /// Core Local Storage for managing storage providers.
 class CoreLocalStorage {
-  CoreLocalStorage({
+  const CoreLocalStorage({
     required this.provider,
     this.encryptedProvider,
   });
