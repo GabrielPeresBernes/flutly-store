@@ -175,7 +175,7 @@ genhtml coverage/lcov.info -o coverage/html
 
 Open `index.html` inside the `coverage/html` directory to view the report.
 
-<img width="1816" height="300" alt="image" src="https://github.com/user-attachments/assets/b3c7e8f6-db89-4ce1-9bcf-f0b00a7e69cb" />
+<img width="1640" height="300" alt="image" src="https://github.com/user-attachments/assets/5a6c03d7-d5db-4141-94b2-744ad534dde5" />
 
 The project prioritizes test coverage for:
 
