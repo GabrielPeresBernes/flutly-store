@@ -1,6 +1,6 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutly_store/app/features/search/domain/repositories/search_repository.dart';
-import 'package:flutly_store/app/features/search/presentation/bloc/search_history_cubit.dart';
+import 'package:flutly_store/app/features/search/presentation/bloc/history/search_history_cubit.dart';
 import 'package:flutly_store/app/shared/errors/app_exception.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fpdart/fpdart.dart';
@@ -26,8 +26,11 @@ void main() {
     act: (cubit) => cubit.getSearchHistory(),
     expect: () => [
       isA<SearchHistoryLoading>(),
-      isA<SearchHistoryLoaded>()
-          .having((state) => state.terms.length, 'length', 2),
+      isA<SearchHistoryLoaded>().having(
+        (state) => state.terms.length,
+        'length',
+        2,
+      ),
     ],
   );
 
@@ -57,8 +60,11 @@ void main() {
     act: (cubit) => cubit.saveSearchTerm('case'),
     expect: () => [
       isA<SearchHistoryUpdateLoading>(),
-      isA<SearchHistoryLoaded>()
-          .having((state) => state.terms.first, 'term', 'case'),
+      isA<SearchHistoryLoaded>().having(
+        (state) => state.terms.first,
+        'term',
+        'case',
+      ),
     ],
   );
 
@@ -88,8 +94,11 @@ void main() {
     act: (cubit) => cubit.removeSearchTerm('case'),
     expect: () => [
       isA<SearchHistoryUpdateLoading>(),
-      isA<SearchHistoryRemoved>()
-          .having((state) => state.removedTerm, 'removedTerm', 'case'),
+      isA<SearchHistoryRemoved>().having(
+        (state) => state.removedTerm,
+        'removedTerm',
+        'case',
+      ),
     ],
   );
 

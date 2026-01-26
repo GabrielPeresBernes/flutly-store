@@ -4,8 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/injector/injector.dart';
 import '../../../../core/router/router.dart';
-import '../../presentation/bloc/catalog_bloc.dart';
-import '../../presentation/bloc/catalog_filters_cubit.dart';
+import '../../presentation/bloc/catalog/catalog_bloc.dart';
+import '../../presentation/bloc/filters/catalog_filters_cubit.dart';
 import '../../presentation/pages/catalog_page.dart';
 import 'catalog_route_params.dart';
 

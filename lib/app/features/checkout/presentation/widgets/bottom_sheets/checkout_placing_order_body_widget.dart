@@ -6,7 +6,7 @@ import '../../../../../core/router/router.dart';
 import '../../../../../shared/extensions/text_theme_extension.dart';
 import '../../../../../shared/theme/tokens/color_tokens.dart';
 import '../../../../../shared/widgets/app_icon_widget.dart';
-import '../../../../cart/presentation/bloc/cart_cubit.dart';
+import '../../../../cart/presentation/bloc/cart/cart_cubit.dart';
 import '../../../domain/entities/order.dart';
 import '../../../infra/routes/checkout_route.dart';
 import '../../../infra/routes/checkout_route_params.dart';

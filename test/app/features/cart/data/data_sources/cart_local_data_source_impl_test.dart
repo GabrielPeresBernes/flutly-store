@@ -1,6 +1,6 @@
 import 'package:flutly_store/app/core/local_storage/local_storage.dart';
 import 'package:flutly_store/app/features/cart/constants/cart_constants.dart';
-import 'package:flutly_store/app/features/cart/data/data_sources/cart_local_data_source_impl.dart';
+import 'package:flutly_store/app/features/cart/data/data_sources/local/cart_local_data_source_impl.dart';
 import 'package:flutly_store/app/features/cart/data/models/cart_model.dart';
 import 'package:flutly_store/app/features/cart/data/models/cart_product_model.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -15,7 +15,7 @@ void main() {
   late LocalStorageProvider storage;
   late CartLocalDataSourceImpl dataSource;
 
-  final cart = CartModel(
+  const cart = CartModel(
     totalPrice: 120.0,
     totalItems: 2,
     products: {

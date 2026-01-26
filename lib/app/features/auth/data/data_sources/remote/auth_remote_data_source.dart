@@ -1,6 +1,6 @@
-import '../../../../shared/types/response_type.dart';
-import '../../domain/entities/credentials.dart';
-import '../models/credentials_model.dart';
+import '../../../../../shared/types/response_type.dart';
+import '../../../domain/entities/credentials.dart';
+import '../../models/credentials_model.dart';
 
 abstract interface class AuthRemoteDataSource {
   TaskResponse<CredentialsModel> signIn({

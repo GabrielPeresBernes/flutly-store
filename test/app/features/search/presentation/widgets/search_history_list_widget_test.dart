@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc_test/bloc_test.dart';
-import 'package:flutly_store/app/features/search/presentation/bloc/search_history_cubit.dart';
+import 'package:flutly_store/app/features/search/presentation/bloc/history/search_history_cubit.dart';
 import 'package:flutly_store/app/features/search/presentation/widgets/search_history_list_widget.dart';
 import 'package:flutly_store/app/features/search/presentation/widgets/search_history_term_widget.dart';
 import 'package:flutter/material.dart';

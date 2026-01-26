@@ -13,14 +13,14 @@ void main() {
   late ProductRepository repository;
 
   final products = [
-    Product(
+    const Product(
       id: 1,
       title: 'Case',
       thumbnail: 'case.png',
       price: 10.0,
       rating: 4.1,
     ),
-    Product(
+    const Product(
       id: 2,
       title: 'Charger',
       thumbnail: 'charger.png',

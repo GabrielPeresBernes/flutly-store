@@ -1,7 +1,7 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutly_store/app/core/router/router.dart';
 import 'package:flutly_store/app/features/cart/domain/entities/cart_product.dart';
-import 'package:flutly_store/app/features/cart/presentation/bloc/cart_cubit.dart';
+import 'package:flutly_store/app/features/cart/presentation/bloc/cart/cart_cubit.dart';
 import 'package:flutly_store/app/features/checkout/domain/entities/address.dart';
 import 'package:flutly_store/app/features/checkout/domain/entities/order.dart';
 import 'package:flutly_store/app/features/checkout/domain/entities/payment_card.dart';
@@ -10,7 +10,6 @@ import 'package:flutly_store/app/features/checkout/infra/routes/checkout_route.d
 import 'package:flutly_store/app/features/checkout/infra/routes/checkout_route_params.dart';
 import 'package:flutly_store/app/features/checkout/presentation/bloc/checkout/checkout_cubit.dart';
 import 'package:flutly_store/app/features/checkout/presentation/widgets/bottom_sheets/checkout_placing_order_body_widget.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';

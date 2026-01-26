@@ -7,12 +7,12 @@ import 'package:firebase_auth/firebase_auth.dart' hide AuthProvider;
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
-import '../../../../shared/errors/app_exception.dart';
-import '../../../../shared/types/response_type.dart';
-import '../../../../shared/utils/task_utils.dart';
-import '../../domain/entities/credentials.dart';
-import '../../utils/auth_errors_utils.dart';
-import '../models/credentials_model.dart';
+import '../../../../../shared/errors/app_exception.dart';
+import '../../../../../shared/types/response_type.dart';
+import '../../../../../shared/utils/task_utils.dart';
+import '../../../domain/entities/credentials.dart';
+import '../../../utils/auth_errors_utils.dart';
+import '../../models/credentials_model.dart';
 import 'auth_remote_data_source.dart';
 
 class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {

@@ -29,7 +29,7 @@ void main() {
   late RouterProvider routerProvider;
 
   final productLists = [
-    HomeProductList(
+    const HomeProductList(
       title: 'Highlights',
       products: [
         HomeProduct(
@@ -119,7 +119,7 @@ void main() {
   testWidgets('shows personalized greeting when user is refreshed', (
     tester,
   ) async {
-    final credentials = Credentials(
+    const credentials = Credentials(
       userId: '1',
       name: 'Alice Doe',
       email: 'alice@test.com',
@@ -129,7 +129,7 @@ void main() {
     await pumpApp(
       tester,
       homeState: const HomeInitial(),
-      appState: AppUserRefreshed(credentials: credentials, hasChanged: false),
+      appState: const AppUserRefreshed(credentials: credentials, hasChanged: false),
     );
     await tester.pumpAndSettle();
 

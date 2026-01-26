@@ -1,8 +1,8 @@
 import '../../../../shared/types/response_type.dart';
 import '../../../product/domain/entities/product.dart';
 import '../../domain/repositories/search_repository.dart';
-import '../data_sources/search_local_data_source.dart';
-import '../data_sources/search_remote_data_source.dart';
+import '../data_sources/local/search_local_data_source.dart';
+import '../data_sources/remote/search_remote_data_source.dart';
 
 class SearchRepositoryImpl implements SearchRepository {
   const SearchRepositoryImpl(

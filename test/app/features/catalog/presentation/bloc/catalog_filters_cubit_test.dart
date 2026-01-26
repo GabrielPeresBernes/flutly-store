@@ -1,5 +1,5 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:flutly_store/app/features/catalog/presentation/bloc/catalog_filters_cubit.dart';
+import 'package:flutly_store/app/features/catalog/presentation/bloc/filters/catalog_filters_cubit.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

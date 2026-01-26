@@ -1,7 +1,7 @@
 import 'package:fpdart/fpdart.dart';
 
-import '../../../../shared/types/response_type.dart';
-import '../models/cart_model.dart';
+import '../../../../../shared/types/response_type.dart';
+import '../../models/cart_model.dart';
 
 /// Remote data source interface for managing the shopping cart.
 abstract interface class CartRemoteDataSource {

@@ -1,5 +1,5 @@
-import 'package:flutly_store/app/features/auth/data/data_sources/auth_local_data_source.dart';
-import 'package:flutly_store/app/features/auth/data/data_sources/auth_remote_data_source.dart';
+import 'package:flutly_store/app/features/auth/data/data_sources/local/auth_local_data_source.dart';
+import 'package:flutly_store/app/features/auth/data/data_sources/remote/auth_remote_data_source.dart';
 import 'package:flutly_store/app/features/auth/data/models/credentials_model.dart';
 import 'package:flutly_store/app/features/auth/data/repositories/auth_repository_impl.dart';
 import 'package:flutly_store/app/features/auth/domain/entities/credentials.dart';

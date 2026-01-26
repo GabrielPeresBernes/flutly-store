@@ -6,7 +6,7 @@ import '../../../../shared/extensions/text_theme_extension.dart';
 import '../../../../shared/widgets/app_icon_widget.dart';
 import '../../../catalog/infra/routes/catalog_route.dart';
 import '../../../catalog/infra/routes/catalog_route_params.dart';
-import '../bloc/search_history_cubit.dart';
+import '../bloc/history/search_history_cubit.dart';
 
 class SearchHistoryTermWidget extends StatelessWidget {
   const SearchHistoryTermWidget({

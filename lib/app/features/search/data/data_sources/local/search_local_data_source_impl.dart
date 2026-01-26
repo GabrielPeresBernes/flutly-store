@@ -1,11 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:fpdart/fpdart.dart';
 
-import '../../../../core/local_storage/local_storage.dart';
-import '../../../../shared/types/response_type.dart';
-import '../../../../shared/utils/task_utils.dart';
-import '../../constants/search_constants.dart';
-import '../models/search_terms_history_model.dart';
+import '../../../../../core/local_storage/local_storage.dart';
+import '../../../../../shared/types/response_type.dart';
+import '../../../../../shared/utils/task_utils.dart';
+import '../../../constants/search_constants.dart';
+import '../../models/search_terms_history_model.dart';
 import 'search_local_data_source.dart';
 
 class SearchLocalDataSourceImpl implements SearchLocalDataSource {
@@ -18,7 +18,7 @@ class SearchLocalDataSourceImpl implements SearchLocalDataSource {
   @override
   TaskResponse<SearchTermsHistoryModel> saveSearchTerm(String term) => task(
     () async {
-      final terms = (await _getSavedTerms())?.terms ?? [];
+      final terms = List<String>.from((await _getSavedTerms())?.terms ?? []);
 
       _saveNewTerm(term, terms);
 
@@ -37,7 +37,7 @@ class SearchLocalDataSourceImpl implements SearchLocalDataSource {
   @override
   TaskResponse<SearchTermsHistoryModel> removeSearchTerm(String term) => task(
     () async {
-      final terms = (await _getSavedTerms())?.terms ?? []
+      final terms = List<String>.from((await _getSavedTerms())?.terms ?? [])
         ..remove(term);
 
       final searchTermsHistory = SearchTermsHistoryModel(terms: terms);

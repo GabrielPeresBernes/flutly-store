@@ -1,8 +1,7 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutly_store/app/core/http/http.dart';
 import 'package:flutly_store/app/features/catalog/data/models/product_model.dart';
 import 'package:flutly_store/app/features/catalog/data/models/products_page_model.dart';
-import 'package:flutly_store/app/features/search/data/data_sources/search_remote_data_source_impl.dart';
+import 'package:flutly_store/app/features/search/data/data_sources/remote/search_remote_data_source_impl.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -24,7 +23,7 @@ void main() {
   });
 
   test('getPopularProducts forwards query and decodes page', () async {
-    final response = ProductsPageModel(
+    const response = ProductsPageModel(
       products: [
         ProductModel(
           id: 1,

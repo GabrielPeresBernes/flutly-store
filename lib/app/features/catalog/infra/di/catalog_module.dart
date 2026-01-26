@@ -6,8 +6,8 @@ import '../../data/data_sources/catalog_remote_data_source.dart';
 import '../../data/data_sources/catalog_remote_data_source_impl.dart';
 import '../../data/repositories/catalog_repository_impl.dart';
 import '../../domain/repositories/catalog_repository.dart';
-import '../../presentation/bloc/catalog_bloc.dart';
-import '../../presentation/bloc/catalog_filters_cubit.dart';
+import '../../presentation/bloc/catalog/catalog_bloc.dart';
+import '../../presentation/bloc/filters/catalog_filters_cubit.dart';
 
 final class CatalogModule extends InjectorModule {
   const CatalogModule();

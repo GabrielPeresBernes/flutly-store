@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>111111111111-aaa1aaaaaaaaa1a111aa1a1a1aaaaaa.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.111111111111-aaa1aaaaaaaaa1a111aa1a1a1aaaaaa</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>111111111111-1aa111aaaaaaa11aaaaaaaaaaa1aa1aa.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AAaaAaAaAA1a1AAaA1AaAaA1a11aAAA1aAaAAAA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>111111111111</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>dev.bernes.flutlystore</string>
+	<key>PROJECT_ID</key>
+	<string>flutly-store</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flutly-store.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:111111111111:ios:1a1aaa11a1aaa111a11a11</string>
+</dict>
+</plist>

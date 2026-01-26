@@ -2,11 +2,11 @@ import 'package:fpdart/fpdart.dart';
 
 import '../../../../shared/extensions/task_either_extension.dart';
 import '../../../../shared/types/response_type.dart';
-import '../../../auth/data/data_sources/auth_local_data_source.dart';
+import '../../../auth/data/data_sources/local/auth_local_data_source.dart';
 import '../../domain/entities/cart.dart';
 import '../../domain/repositories/cart_repository.dart';
-import '../data_sources/cart_local_data_source.dart';
-import '../data_sources/cart_remote_data_source.dart';
+import '../data_sources/local/cart_local_data_source.dart';
+import '../data_sources/remote/cart_remote_data_source.dart';
 import '../models/cart_model.dart';
 
 class CartRepositoryImpl implements CartRepository {

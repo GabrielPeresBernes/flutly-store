@@ -6,7 +6,7 @@ import '../../../../shared/widgets/app_bottom_sheet_widget.dart';
 import '../../../../shared/widgets/buttons/app_elevated_button_widget.dart';
 import '../../../../shared/widgets/buttons/app_outlined_button_widget.dart';
 import '../../../../shared/widgets/inputs/app_text_field_widget.dart';
-import '../bloc/catalog_filters_cubit.dart';
+import '../bloc/filters/catalog_filters_cubit.dart';
 
 class FiltersBottomSheetWidget extends StatefulWidget {
   const FiltersBottomSheetWidget({

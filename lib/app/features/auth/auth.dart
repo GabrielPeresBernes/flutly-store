@@ -1,7 +1,7 @@
-export 'data/data_sources/auth_local_data_source.dart';
-export 'data/data_sources/auth_local_data_source_impl.dart';
-export 'data/data_sources/auth_remote_data_source.dart';
-export 'data/data_sources/auth_remote_data_source_impl.dart';
+export 'data/data_sources/local/auth_local_data_source.dart';
+export 'data/data_sources/local/auth_local_data_source_impl.dart';
+export 'data/data_sources/remote/auth_remote_data_source.dart';
+export 'data/data_sources/remote/auth_remote_data_source_impl.dart';
 export 'data/models/credentials_model.dart';
 export 'data/repositories/auth_repository_impl.dart';
 export 'domain/entities/credentials.dart';

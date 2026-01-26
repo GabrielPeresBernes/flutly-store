@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/injector/injector.dart';
 import '../../../../core/router/router.dart';
-import '../../presentation/bloc/cart_popular_products_cubit.dart';
+import '../../presentation/bloc/popular_products/cart_popular_products_cubit.dart';
 import '../../presentation/pages/cart_page.dart';
 
 class CartRoute extends CoreRoute {

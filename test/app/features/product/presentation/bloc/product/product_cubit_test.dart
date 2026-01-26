@@ -14,7 +14,7 @@ class MockProductRepository extends Mock implements ProductRepository {}
 void main() {
   late ProductRepository repository;
 
-  final product = ProductExtended(
+  const product = ProductExtended(
     id: 1,
     title: 'Phone',
     thumbnail: 'thumb.png',
@@ -22,7 +22,7 @@ void main() {
     rating: 4.5,
     description: 'A phone',
     brand: 'Brand',
-    images: const ['img.png'],
+    images: ['img.png'],
     discountPercentage: 10.0,
   );
 

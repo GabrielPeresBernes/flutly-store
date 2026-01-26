@@ -23,7 +23,7 @@ void main() {
       title: 'Highlights',
       variant: HomeProductListType.highlight.type,
       products: [
-        HomeProductModel(
+        const HomeProductModel(
           id: '1',
           title: 'Phone',
           price: 100.0,

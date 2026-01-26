@@ -1,6 +1,6 @@
 import 'package:flutly_store/app/core/local_storage/local_storage.dart';
 import 'package:flutly_store/app/features/search/constants/search_constants.dart';
-import 'package:flutly_store/app/features/search/data/data_sources/search_local_data_source_impl.dart';
+import 'package:flutly_store/app/features/search/data/data_sources/local/search_local_data_source_impl.dart';
 import 'package:flutly_store/app/features/search/data/models/search_terms_history_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fpdart/fpdart.dart';
@@ -19,7 +19,7 @@ void main() {
 
   setUpAll(() async {
     await TestUtils.setUpLocalization();
-    registerFallbackValue(SearchTermsHistoryModel(terms: const []));
+    registerFallbackValue(const SearchTermsHistoryModel(terms: []));
   });
 
   setUp(() {
@@ -31,7 +31,7 @@ void main() {
   });
 
   test('saveSearchTerm inserts term and caps length', () async {
-    final existing = SearchTermsHistoryModel(
+    const existing = SearchTermsHistoryModel(
       terms: ['case', 'charger', 'cable', 'adapter'],
     );
 
@@ -60,11 +60,12 @@ void main() {
               ),
             ).captured.single
             as SearchTermsHistoryModel;
+
     expect(captured.terms, ['phone', 'case', 'charger', 'cable']);
   });
 
   test('removeSearchTerm removes term and persists', () async {
-    final existing = SearchTermsHistoryModel(
+    const existing = SearchTermsHistoryModel(
       terms: ['case', 'charger', 'cable'],
     );
 
@@ -97,7 +98,7 @@ void main() {
   });
 
   test('getSearchTerms returns Some when data exists', () async {
-    final existing = SearchTermsHistoryModel(terms: ['case']);
+    const existing = SearchTermsHistoryModel(terms: ['case']);
 
     when(
       () => storage.get<SearchTermsHistoryModel>(

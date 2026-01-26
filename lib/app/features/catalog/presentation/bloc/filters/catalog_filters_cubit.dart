@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../domain/entities/product_filters.dart';
+import '../../../domain/entities/product_filters.dart';
 
 part 'catalog_filters_state.dart';
 

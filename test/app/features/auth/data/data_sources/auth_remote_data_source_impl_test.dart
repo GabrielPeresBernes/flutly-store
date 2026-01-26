@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart' hide AuthProvider;
-import 'package:flutly_store/app/features/auth/data/data_sources/auth_remote_data_source_impl.dart';
+import 'package:flutly_store/app/features/auth/data/data_sources/remote/auth_remote_data_source_impl.dart';
 import 'package:flutly_store/app/features/auth/domain/entities/credentials.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:google_sign_in/google_sign_in.dart';

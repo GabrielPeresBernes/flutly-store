@@ -6,7 +6,7 @@ import '../../../../shared/extensions/show_app_bottom_sheet_extension.dart';
 import '../../../../shared/extensions/text_theme_extension.dart';
 import '../../../../shared/theme/tokens/color_tokens.dart';
 import '../../../../shared/widgets/app_icon_widget.dart';
-import '../bloc/catalog_filters_cubit.dart';
+import '../bloc/filters/catalog_filters_cubit.dart';
 import 'filters_bottom_sheet_widget.dart';
 
 class FiltersButtonWidget extends StatelessWidget {

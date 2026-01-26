@@ -19,7 +19,7 @@ void main() {
   });
 
   test('getProductById maps model to entity and forwards id', () async {
-    final model = ProductExtendedModel(
+    const model = ProductExtendedModel(
       id: 7,
       title: 'Phone',
       thumbnail: 'thumb.png',
@@ -27,7 +27,7 @@ void main() {
       description: 'A phone',
       category: 'mobile-accessories',
       brand: 'Brand',
-      images: const ['img.png'],
+      images: ['img.png'],
       discountPercentage: 12.0,
       rating: 4.6,
     );
@@ -54,7 +54,7 @@ void main() {
 
   test('getRecommendations maps models to entities and forwards id', () async {
     final models = [
-      ProductModel(
+      const ProductModel(
         id: 1,
         title: 'Case',
         thumbnail: 'case.png',
@@ -62,7 +62,7 @@ void main() {
         rating: 4.1,
         category: 'mobile-accessories',
       ),
-      ProductModel(
+      const ProductModel(
         id: 2,
         title: 'Charger',
         thumbnail: 'charger.png',

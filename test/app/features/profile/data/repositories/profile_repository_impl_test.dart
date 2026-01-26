@@ -1,4 +1,4 @@
-import 'package:flutly_store/app/features/auth/data/data_sources/auth_local_data_source.dart';
+import 'package:flutly_store/app/features/auth/data/data_sources/local/auth_local_data_source.dart';
 import 'package:flutly_store/app/features/auth/data/models/credentials_model.dart';
 import 'package:flutly_store/app/features/profile/data/data_sources/profile_remote_data_source.dart';
 import 'package:flutly_store/app/features/profile/data/models/bug_report_model.dart';
@@ -24,16 +24,16 @@ void main() {
   late AuthLocalDataSource authLocalDataSource;
   late ProfileRepositoryImpl repository;
 
-  final bugReport = BugReport(
+  const bugReport = BugReport(
     description: 'Crash on checkout',
-    stepsToReproduce: const ['Open cart', 'Tap checkout'],
+    stepsToReproduce: ['Open cart', 'Tap checkout'],
     expectedBehavior: 'Checkout should open',
     issueType: 'Crash',
     screen: 'Cart',
     frequency: 'Always',
   );
 
-  final credentials = CredentialsModel(
+  const credentials = CredentialsModel(
     userId: 'user-1',
     name: 'User',
     email: 'user@test.com',
@@ -69,7 +69,7 @@ void main() {
 
   test('reportBug forwards bug report when user is authenticated', () async {
     when(() => authLocalDataSource.getCredentials()).thenReturn(
-      TaskEither.right(Option.of(credentials)),
+      TaskEither.right(const Option.of(credentials)),
     );
     when(() => remoteDataSource.reportBug(any(), credentials)).thenReturn(
       TaskEither.right(null),

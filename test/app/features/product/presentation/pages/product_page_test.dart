@@ -1,16 +1,6 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutly_store/app/core/router/router.dart';
 import 'package:flutly_store/app/features/cart/cart.dart';
-import 'package:flutly_store/app/features/cart/presentation/bloc/cart_cubit.dart';
-import 'package:flutly_store/app/features/product/domain/entities/product_extended.dart';
-import 'package:flutly_store/app/features/product/presentation/bloc/product/product_cubit.dart';
-import 'package:flutly_store/app/features/product/presentation/bloc/recommendation/product_recommendation_cubit.dart';
-import 'package:flutly_store/app/features/product/presentation/pages/product_page.dart';
-import 'package:flutly_store/app/features/product/presentation/widgets/page_states/product_failure_widget.dart';
-import 'package:flutly_store/app/features/product/presentation/widgets/page_states/product_loaded_widget.dart';
-import 'package:flutly_store/app/features/product/presentation/widgets/page_states/product_loading_widget.dart';
-import 'package:flutly_store/app/features/product/presentation/widgets/page_states/recommendation_loading_widget.dart';
-import 'package:flutly_store/app/features/product/presentation/widgets/product_added_bottom_sheet_widget.dart';
 import 'package:flutly_store/app/features/product/product.dart';
 import 'package:flutly_store/app/features/search/infra/routes/search_route.dart';
 import 'package:flutly_store/app/shared/errors/app_exception.dart';

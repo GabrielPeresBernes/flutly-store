@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../shared/extensions/layout_extension.dart';
 import '../../constants/cart_constants.dart';
 import '../../domain/entities/cart_product.dart';
-import '../bloc/cart_cubit.dart';
+import '../bloc/cart/cart_cubit.dart';
 import 'cart_item_widget.dart';
 
 class CartItemsListWidget extends StatefulWidget {

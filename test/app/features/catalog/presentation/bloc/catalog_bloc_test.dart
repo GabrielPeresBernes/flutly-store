@@ -2,7 +2,7 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutly_store/app/features/catalog/domain/entities/product_filters.dart';
 import 'package:flutly_store/app/features/catalog/domain/entities/products_page.dart';
 import 'package:flutly_store/app/features/catalog/domain/repositories/catalog_repository.dart';
-import 'package:flutly_store/app/features/catalog/presentation/bloc/catalog_bloc.dart';
+import 'package:flutly_store/app/features/catalog/presentation/bloc/catalog/catalog_bloc.dart';
 import 'package:flutly_store/app/features/product/domain/entities/product.dart';
 import 'package:flutly_store/app/shared/errors/app_exception.dart';
 import 'package:flutter_test/flutter_test.dart';

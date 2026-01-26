@@ -1,8 +1,7 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutly_store/app/core/injector/injector.dart';
-import 'package:flutly_store/app/core/injector/lib/providers/injector_provider.dart';
 import 'package:flutly_store/app/features/cart/domain/entities/cart.dart';
-import 'package:flutly_store/app/features/cart/presentation/bloc/cart_cubit.dart';
+import 'package:flutly_store/app/features/cart/presentation/bloc/cart/cart_cubit.dart';
 import 'package:flutly_store/app/features/checkout/presentation/bloc/checkout/checkout_cubit.dart';
 import 'package:flutly_store/app/features/checkout/presentation/bloc/checkout_address/checkout_address_cubit.dart';
 import 'package:flutly_store/app/features/checkout/presentation/bloc/checkout_navigation/checkout_navigation_cubit.dart';

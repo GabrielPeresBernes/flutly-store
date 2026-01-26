@@ -11,7 +11,7 @@ import '../../../../../shared/widgets/navigation_bars/app_top_navigation_bar.dar
 import '../../../../checkout/presentation/widgets/bottom_sheets/checkout_bottom_sheet_widget.dart';
 import '../../../domain/entities/cart.dart';
 import '../../../domain/entities/cart_product.dart';
-import '../../bloc/cart_cubit.dart';
+import '../../bloc/cart/cart_cubit.dart';
 import '../cart_bottom_sheet_unauthenticated_widget.dart';
 import '../cart_items_list_widget.dart';
 import '../cart_summary_loaded_widget.dart';

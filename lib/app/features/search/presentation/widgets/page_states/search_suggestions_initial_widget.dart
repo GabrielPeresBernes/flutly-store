@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../shared/extensions/layout_extension.dart';
-import '../../bloc/search_history_cubit.dart';
-import '../../bloc/search_popular_products_cubit.dart';
+import '../../bloc/history/search_history_cubit.dart';
+import '../../bloc/popular_products/search_popular_products_cubit.dart';
 import 'search_history_loaded_widget.dart';
 import 'search_history_loading_widget.dart';
 import 'search_popular_products_loaded_widget.dart';

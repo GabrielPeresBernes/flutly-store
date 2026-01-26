@@ -1,5 +1,5 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:flutly_store/app/features/search/presentation/bloc/search_suggestions_cubit.dart';
+import 'package:flutly_store/app/features/search/presentation/bloc/suggestions/search_suggestions_cubit.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../../../../utils/test_utils.dart';

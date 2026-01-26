@@ -1,6 +1,4 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:flutly_store/app/core/router/lib/core_router.dart';
-import 'package:flutly_store/app/core/router/lib/widgets/core_router_scope.dart';
 import 'package:flutly_store/app/core/router/router.dart';
 import 'package:flutly_store/app/features/auth/domain/entities/credentials.dart';
 import 'package:flutly_store/app/features/auth/domain/repositories/auth_repository.dart';

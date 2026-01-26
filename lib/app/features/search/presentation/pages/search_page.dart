@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../shared/widgets/navigation_bars/app_top_navigation_bar.dart';
-import '../bloc/search_suggestions_cubit.dart';
+import '../bloc/suggestions/search_suggestions_cubit.dart';
 import '../widgets/page_states/search_suggestions_initial_widget.dart';
 import '../widgets/page_states/search_suggestions_loaded_widget.dart';
 import '../widgets/page_states/search_suggestions_loading_widget.dart';

@@ -19,13 +19,13 @@ void main() {
     country: 'BR',
   );
 
-  final shipping = Shipping(
+  const shipping = Shipping(
     name: 'Express',
     cost: 10.0,
     duration: '2 days',
   );
 
-  final payment = PaymentCard(
+  const payment = PaymentCard(
     name: 'User',
     last4Digits: '1234',
     expirationDate: '12/30',
@@ -33,7 +33,7 @@ void main() {
     brand: CardBrand.visa,
   );
 
-  final cart = Cart(
+  const cart = Cart(
     totalPrice: 20.0,
     totalItems: 2,
     products: {

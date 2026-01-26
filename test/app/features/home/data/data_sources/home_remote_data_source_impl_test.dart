@@ -9,7 +9,7 @@ void main() {
   late CoreHttp http;
   late HomeRemoteDataSourceImpl dataSource;
 
-  final homeProductList = HomeProductListModel(
+  const homeProductList = HomeProductListModel(
     title: 'Featured',
     variant: 'grid',
     products: [

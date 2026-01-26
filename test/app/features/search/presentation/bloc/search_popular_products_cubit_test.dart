@@ -1,7 +1,7 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutly_store/app/features/product/domain/entities/product.dart';
 import 'package:flutly_store/app/features/search/domain/repositories/search_repository.dart';
-import 'package:flutly_store/app/features/search/presentation/bloc/search_popular_products_cubit.dart';
+import 'package:flutly_store/app/features/search/presentation/bloc/popular_products/search_popular_products_cubit.dart';
 import 'package:flutly_store/app/shared/errors/app_exception.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fpdart/fpdart.dart';
@@ -13,7 +13,7 @@ void main() {
   late SearchRepository repository;
 
   final products = [
-    Product(
+    const Product(
       id: 1,
       title: 'Case',
       thumbnail: 'case.png',
@@ -37,8 +37,11 @@ void main() {
     act: (cubit) => cubit.getPopularProducts(),
     expect: () => [
       isA<SearchPopularProductsLoading>(),
-      isA<SearchPopularProductsLoaded>()
-          .having((state) => state.products.length, 'length', 1),
+      isA<SearchPopularProductsLoaded>().having(
+        (state) => state.products.length,
+        'length',
+        1,
+      ),
     ],
   );
 

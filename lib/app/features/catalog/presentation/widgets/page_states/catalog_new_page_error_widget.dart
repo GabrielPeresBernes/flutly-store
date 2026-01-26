@@ -6,7 +6,7 @@ import '../../../../../core/router/router.dart';
 import '../../../../../shared/extensions/text_theme_extension.dart';
 import '../../../../../shared/widgets/buttons/app_outlined_button_widget.dart';
 import '../../../infra/routes/catalog_route_params.dart';
-import '../../bloc/catalog_bloc.dart';
+import '../../bloc/catalog/catalog_bloc.dart';
 
 class CatalogNewPageErrorWidget extends StatelessWidget {
   const CatalogNewPageErrorWidget({super.key});

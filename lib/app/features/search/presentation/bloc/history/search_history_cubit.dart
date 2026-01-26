@@ -1,8 +1,7 @@
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../shared/errors/app_exception.dart';
-import '../../domain/repositories/search_repository.dart';
+import '../../../../../shared/errors/app_exception.dart';
+import '../../../domain/repositories/search_repository.dart';
 
 part 'search_history_state.dart';
 

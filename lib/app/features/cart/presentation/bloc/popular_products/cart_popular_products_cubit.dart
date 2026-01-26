@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../shared/errors/app_exception.dart';
-import '../../../product/domain/entities/product.dart';
-import '../../../search/domain/repositories/search_repository.dart';
+import '../../../../../shared/errors/app_exception.dart';
+import '../../../../product/domain/entities/product.dart';
+import '../../../../search/domain/repositories/search_repository.dart';
 
 part 'cart_popular_products_state.dart';
 

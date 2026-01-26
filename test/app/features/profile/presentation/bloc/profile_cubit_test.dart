@@ -22,16 +22,16 @@ void main() {
   late AuthRepository authRepository;
   late ProfileRepository profileRepository;
 
-  final credentials = Credentials(
+  const credentials = Credentials(
     userId: 'user-1',
     name: 'User',
     email: 'user@test.com',
     provider: AuthProvider.google,
   );
 
-  final bugReport = BugReport(
+  const bugReport = BugReport(
     description: 'Crash on checkout',
-    stepsToReproduce: const ['Open cart', 'Tap checkout'],
+    stepsToReproduce: ['Open cart', 'Tap checkout'],
     expectedBehavior: 'Checkout should open',
     issueType: 'Crash',
     screen: 'Cart',
@@ -84,7 +84,7 @@ void main() {
     'getUserData fills form and disables password fields for social login',
     build: () {
       when(() => authRepository.getCredentials()).thenReturn(
-        TaskEither.right(Option.of(credentials)),
+        TaskEither.right(const Option.of(credentials)),
       );
       return ProfileCubit(authRepository, profileRepository);
     },

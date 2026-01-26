@@ -5,8 +5,8 @@ import '../../../../shared/errors/app_exception.dart';
 import '../../../../shared/types/response_type.dart';
 import '../../domain/entities/credentials.dart';
 import '../../domain/repositories/auth_repository.dart';
-import '../data_sources/auth_local_data_source.dart';
-import '../data_sources/auth_remote_data_source.dart';
+import '../data_sources/local/auth_local_data_source.dart';
+import '../data_sources/remote/auth_remote_data_source.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
   const AuthRepositoryImpl(this._remoteDataSource, this._localDataSource);

@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:stream_transform/stream_transform.dart';
 
-import '../../../product/domain/entities/product.dart';
-import '../../domain/entities/product_filters.dart';
-import '../../domain/repositories/catalog_repository.dart';
+import '../../../../product/domain/entities/product.dart';
+import '../../../domain/entities/product_filters.dart';
+import '../../../domain/repositories/catalog_repository.dart';
 
 part 'catalog_event.dart';
 

@@ -10,7 +10,7 @@ import '../../../../shared/widgets/app_network_image_widget.dart';
 import '../../../../shared/widgets/products/product_hero_widget.dart';
 import '../../../product/product.dart';
 import '../../domain/entities/cart_product.dart';
-import '../bloc/cart_cubit.dart';
+import '../bloc/cart/cart_cubit.dart';
 import 'cart_item_quantity_widget.dart';
 
 class CartItemWidget extends StatelessWidget {

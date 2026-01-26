@@ -10,7 +10,7 @@ import '../../../../../shared/theme/tokens/color_tokens.dart';
 import '../../../../../shared/widgets/app_icon_widget.dart';
 import '../../../../../shared/widgets/buttons/app_elevated_button_widget.dart';
 import '../../../../../shared/widgets/navigation_bars/app_top_navigation_bar.dart';
-import '../../bloc/cart_popular_products_cubit.dart';
+import '../../bloc/popular_products/cart_popular_products_cubit.dart';
 import 'popular_products_failure_widget.dart';
 import 'popular_products_loaded_widget.dart';
 import 'popular_products_loading_widget.dart';

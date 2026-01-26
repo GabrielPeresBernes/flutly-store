@@ -3,9 +3,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../../../../core/injector/injector.dart';
-import '../../../auth/data/data_sources/auth_local_data_source.dart';
+import '../../../../shared/utils/env.dart';
+import '../../../auth/data/data_sources/local/auth_local_data_source.dart';
 import '../../../auth/domain/repositories/auth_repository.dart';
 import '../../data/data_sources/profile_remote_data_source.dart';
+import '../../data/data_sources/profile_remote_data_source_demo_impl.dart';
 import '../../data/data_sources/profile_remote_data_source_impl.dart';
 import '../../data/repositories/profile_repository_impl.dart';
 import '../../domain/repositories/profile_repository.dart';
@@ -17,9 +19,9 @@ class ProfileModule extends InjectorModule {
   @override
   Future<void> register(CoreInjector injector) async {
     injector.registerLazySingleton<ProfileRemoteDataSource>(
-      () => ProfileRemoteDataSourceImpl(
-        injector.get<FirebaseFirestore>(),
-      ),
+      () => Env.useFirebase
+          ? ProfileRemoteDataSourceImpl(injector.get<FirebaseFirestore>())
+          : ProfileRemoteDataSourceDemoImpl(),
     );
 
     injector.registerLazySingleton<ProfileRepository>(

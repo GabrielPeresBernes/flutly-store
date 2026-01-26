@@ -1,6 +1,6 @@
 import 'package:flutly_store/app/core/local_storage/local_storage.dart';
 import 'package:flutly_store/app/features/auth/constants/auth_constants.dart';
-import 'package:flutly_store/app/features/auth/data/data_sources/auth_local_data_source_impl.dart';
+import 'package:flutly_store/app/features/auth/data/data_sources/local/auth_local_data_source_impl.dart';
 import 'package:flutly_store/app/features/auth/data/models/credentials_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -14,7 +14,7 @@ void main() {
   late LocalStorageProvider secureStorage;
   late AuthLocalDataSourceImpl dataSource;
 
-  final credentials = CredentialsModel(
+  const credentials = CredentialsModel(
     userId: '1',
     name: 'User',
     email: 'user@test.com',

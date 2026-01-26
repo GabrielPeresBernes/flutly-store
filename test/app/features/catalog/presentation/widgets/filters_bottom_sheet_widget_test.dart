@@ -1,4 +1,4 @@
-import 'package:flutly_store/app/features/catalog/presentation/bloc/catalog_filters_cubit.dart';
+import 'package:flutly_store/app/features/catalog/presentation/bloc/filters/catalog_filters_cubit.dart';
 import 'package:flutly_store/app/features/catalog/presentation/widgets/filters_bottom_sheet_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -77,7 +77,9 @@ void main() {
     );
     expect(selectedChip.selected, isTrue);
 
-    final fields = tester.widgetList<TextField>(find.byType(TextField)).toList();
+    final fields = tester
+        .widgetList<TextField>(find.byType(TextField))
+        .toList();
     expect(fields.first.controller?.text, '10');
     expect(fields.last.controller?.text, '100');
   });

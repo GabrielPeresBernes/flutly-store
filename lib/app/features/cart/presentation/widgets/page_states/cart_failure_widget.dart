@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../shared/widgets/buttons/app_outlined_button_widget.dart';
 import '../../../../../shared/widgets/navigation_bars/app_top_navigation_bar.dart';
-import '../../bloc/cart_cubit.dart';
+import '../../bloc/cart/cart_cubit.dart';
 
 class CartFailureWidget extends StatelessWidget {
   const CartFailureWidget({super.key});

@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutly_store/app/core/injector/injector.dart';
 import 'package:flutly_store/app/features/auth/data/models/credentials_model.dart';
 import 'package:flutly_store/app/features/profile/data/data_sources/profile_remote_data_source_impl.dart';
 import 'package:flutly_store/app/features/profile/data/models/bug_report_model.dart';
@@ -9,7 +8,6 @@ import 'package:mocktail/mocktail.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:platform/platform.dart';
 
-import '../../../../../fakes/fake_injector_provider.dart';
 import '../../../../../utils/test_utils.dart';
 
 class MockFirebaseFirestore extends Mock implements FirebaseFirestore {}
@@ -32,16 +30,16 @@ void main() {
   late LocalPlatform localPlatform;
   late ProfileRemoteDataSourceImpl dataSource;
 
-  final bugReport = BugReportModel(
+  const bugReport = BugReportModel(
     description: 'Crash on checkout',
-    stepsToReproduce: const ['Open cart', 'Tap checkout'],
+    stepsToReproduce: ['Open cart', 'Tap checkout'],
     expectedBehavior: 'Checkout should open',
     issueType: 'Crash',
     screen: 'Cart',
     frequency: 'Always',
   );
 
-  final credentials = CredentialsModel(
+  const credentials = CredentialsModel(
     userId: 'user-1',
     name: 'User',
     email: 'user@test.com',

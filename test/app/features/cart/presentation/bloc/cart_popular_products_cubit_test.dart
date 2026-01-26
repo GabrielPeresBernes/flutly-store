@@ -1,5 +1,5 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:flutly_store/app/features/cart/presentation/bloc/cart_popular_products_cubit.dart';
+import 'package:flutly_store/app/features/cart/presentation/bloc/popular_products/cart_popular_products_cubit.dart';
 import 'package:flutly_store/app/features/product/domain/entities/product.dart';
 import 'package:flutly_store/app/features/search/domain/repositories/search_repository.dart';
 import 'package:flutly_store/app/shared/errors/app_exception.dart';
@@ -13,7 +13,7 @@ void main() {
   late SearchRepository repository;
 
   final products = [
-    Product(
+    const Product(
       id: 1,
       title: 'Item',
       thumbnail: 'thumb.png',

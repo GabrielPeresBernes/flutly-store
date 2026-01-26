@@ -4,7 +4,7 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutly_store/app/core/router/router.dart';
 import 'package:flutly_store/app/features/cart/domain/entities/cart.dart';
 import 'package:flutly_store/app/features/cart/domain/entities/cart_product.dart';
-import 'package:flutly_store/app/features/cart/presentation/bloc/cart_cubit.dart';
+import 'package:flutly_store/app/features/cart/presentation/bloc/cart/cart_cubit.dart';
 import 'package:flutly_store/app/features/cart/presentation/widgets/cart_item_widget.dart';
 import 'package:flutly_store/app/features/cart/presentation/widgets/cart_items_list_widget.dart';
 import 'package:flutter/material.dart';

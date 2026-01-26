@@ -3,15 +3,15 @@
 import '../../../../core/http/http.dart';
 import '../../../../core/injector/injector.dart';
 import '../../../../core/local_storage/local_storage.dart';
-import '../../data/data_sources/search_local_data_source.dart';
-import '../../data/data_sources/search_local_data_source_impl.dart';
-import '../../data/data_sources/search_remote_data_source.dart';
-import '../../data/data_sources/search_remote_data_source_impl.dart';
+import '../../data/data_sources/local/search_local_data_source.dart';
+import '../../data/data_sources/local/search_local_data_source_impl.dart';
+import '../../data/data_sources/remote/search_remote_data_source.dart';
+import '../../data/data_sources/remote/search_remote_data_source_impl.dart';
 import '../../data/repositories/search_repository_impl.dart';
 import '../../domain/repositories/search_repository.dart';
-import '../../presentation/bloc/search_history_cubit.dart';
-import '../../presentation/bloc/search_popular_products_cubit.dart';
-import '../../presentation/bloc/search_suggestions_cubit.dart';
+import '../../presentation/bloc/history/search_history_cubit.dart';
+import '../../presentation/bloc/popular_products/search_popular_products_cubit.dart';
+import '../../presentation/bloc/suggestions/search_suggestions_cubit.dart';
 
 class SearchModule extends InjectorModule {
   const SearchModule();

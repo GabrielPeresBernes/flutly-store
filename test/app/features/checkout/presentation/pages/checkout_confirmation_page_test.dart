@@ -40,13 +40,13 @@ void main() {
     country: 'BR',
   );
 
-  final shipping = Shipping(
+  const shipping = Shipping(
     name: 'Express',
     cost: 0,
     duration: '2 days',
   );
 
-  final payment = PaymentCard(
+  const payment = PaymentCard(
     name: 'User',
     last4Digits: '1234',
     expirationDate: '12/30',
@@ -54,7 +54,7 @@ void main() {
     brand: CardBrand.visa,
   );
 
-  final order = Order(
+  const order = Order(
     id: '12345',
     address: address,
     shipping: shipping,
@@ -125,7 +125,7 @@ void main() {
   });
 
   testWidgets('renders order summary when order exists', (tester) async {
-    await pumpApp(tester, params: CheckoutRouteParams(order: order));
+    await pumpApp(tester, params: const CheckoutRouteParams(order: order));
     await tester.pumpAndSettle();
 
     expect(find.textContaining(order.id), findsOneWidget);
@@ -137,7 +137,7 @@ void main() {
   });
 
   testWidgets('close action pops and navigates home', (tester) async {
-    await pumpApp(tester, params: CheckoutRouteParams(order: order));
+    await pumpApp(tester, params: const CheckoutRouteParams(order: order));
     await tester.pumpAndSettle();
 
     final closeIcon = find.byWidgetPredicate(

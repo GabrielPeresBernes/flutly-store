@@ -27,7 +27,7 @@ class _AppState extends State<App> {
   void initState() {
     super.initState();
 
-    _injectionFuture = AppModule().register(CoreInjector.instance);
+    _injectionFuture = const AppModule().register(CoreInjector.instance);
   }
 
   @override

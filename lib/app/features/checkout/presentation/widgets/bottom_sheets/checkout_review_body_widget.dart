@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../cart/presentation/bloc/cart_cubit.dart';
+import '../../../../cart/presentation/bloc/cart/cart_cubit.dart';
 import '../../bloc/checkout/checkout_cubit.dart';
 import '../summary_address_widget.dart';
 import '../summary_delivery_widget.dart';

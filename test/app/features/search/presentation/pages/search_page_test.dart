@@ -1,14 +1,6 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutly_store/app/core/router/router.dart';
 import 'package:flutly_store/app/features/product/domain/entities/product.dart';
-import 'package:flutly_store/app/features/search/presentation/bloc/search_history_cubit.dart';
-import 'package:flutly_store/app/features/search/presentation/bloc/search_popular_products_cubit.dart';
-import 'package:flutly_store/app/features/search/presentation/bloc/search_suggestions_cubit.dart';
-import 'package:flutly_store/app/features/search/presentation/pages/search_page.dart';
-import 'package:flutly_store/app/features/search/presentation/widgets/page_states/search_suggestions_initial_widget.dart';
-import 'package:flutly_store/app/features/search/presentation/widgets/page_states/search_suggestions_loaded_widget.dart';
-import 'package:flutly_store/app/features/search/presentation/widgets/page_states/search_suggestions_loading_widget.dart';
-import 'package:flutly_store/app/features/search/presentation/widgets/search_text_field_widget.dart';
 import 'package:flutly_store/app/features/search/search.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';

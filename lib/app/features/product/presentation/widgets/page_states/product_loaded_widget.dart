@@ -8,7 +8,7 @@ import '../../../../../shared/extensions/show_app_snack_bar_extension.dart';
 import '../../../../../shared/extensions/text_theme_extension.dart';
 import '../../../../../shared/theme/tokens/color_tokens.dart';
 import '../../../../../shared/widgets/buttons/app_elevated_button_widget.dart';
-import '../../../../cart/presentation/bloc/cart_cubit.dart';
+import '../../../../cart/presentation/bloc/cart/cart_cubit.dart';
 import '../../../domain/entities/product_extended.dart';
 import '../../bloc/product/product_cubit.dart';
 import '../../bloc/recommendation/product_recommendation_cubit.dart';

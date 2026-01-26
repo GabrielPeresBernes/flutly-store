@@ -1,7 +1,7 @@
 import 'package:flutly_store/app/features/catalog/data/models/product_model.dart';
 import 'package:flutly_store/app/features/catalog/data/models/products_page_model.dart';
-import 'package:flutly_store/app/features/search/data/data_sources/search_local_data_source.dart';
-import 'package:flutly_store/app/features/search/data/data_sources/search_remote_data_source.dart';
+import 'package:flutly_store/app/features/search/data/data_sources/local/search_local_data_source.dart';
+import 'package:flutly_store/app/features/search/data/data_sources/remote/search_remote_data_source.dart';
 import 'package:flutly_store/app/features/search/data/models/search_terms_history_model.dart';
 import 'package:flutly_store/app/features/search/data/repositories/search_repository_impl.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -25,7 +25,7 @@ void main() {
   });
 
   test('getPopularProducts maps models to entities', () async {
-    final response = ProductsPageModel(
+    const response = ProductsPageModel(
       products: [
         ProductModel(
           id: 1,
@@ -73,7 +73,7 @@ void main() {
   });
 
   test('saveSearchTerm maps history to terms', () async {
-    final history = SearchTermsHistoryModel(terms: ['case', 'charger']);
+    const history = SearchTermsHistoryModel(terms: ['case', 'charger']);
 
     when(() => localDataSource.saveSearchTerm('case')).thenReturn(
       TaskEither.right(history),
@@ -89,7 +89,7 @@ void main() {
   });
 
   test('removeSearchTerm maps history to terms', () async {
-    final history = SearchTermsHistoryModel(terms: ['case']);
+    const history = SearchTermsHistoryModel(terms: ['case']);
 
     when(() => localDataSource.removeSearchTerm('charger')).thenReturn(
       TaskEither.right(history),

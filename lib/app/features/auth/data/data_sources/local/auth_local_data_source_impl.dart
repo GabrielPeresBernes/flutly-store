@@ -1,11 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:fpdart/fpdart.dart';
 
-import '../../../../core/local_storage/local_storage.dart';
-import '../../../../shared/types/response_type.dart';
-import '../../../../shared/utils/task_utils.dart';
-import '../../constants/auth_constants.dart';
-import '../models/credentials_model.dart';
+import '../../../../../core/local_storage/local_storage.dart';
+import '../../../../../shared/types/response_type.dart';
+import '../../../../../shared/utils/task_utils.dart';
+import '../../../constants/auth_constants.dart';
+import '../../models/credentials_model.dart';
 import 'auth_local_data_source.dart';
 
 class AuthLocalDataSourceImpl implements AuthLocalDataSource {

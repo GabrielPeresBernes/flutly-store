@@ -1,7 +1,7 @@
-import 'package:flutly_store/app/features/auth/data/data_sources/auth_local_data_source.dart';
+import 'package:flutly_store/app/features/auth/data/data_sources/local/auth_local_data_source.dart';
 import 'package:flutly_store/app/features/auth/data/models/credentials_model.dart';
-import 'package:flutly_store/app/features/cart/data/data_sources/cart_local_data_source.dart';
-import 'package:flutly_store/app/features/cart/data/data_sources/cart_remote_data_source.dart';
+import 'package:flutly_store/app/features/cart/data/data_sources/local/cart_local_data_source.dart';
+import 'package:flutly_store/app/features/cart/data/data_sources/remote/cart_remote_data_source.dart';
 import 'package:flutly_store/app/features/cart/data/models/cart_model.dart';
 import 'package:flutly_store/app/features/cart/data/models/cart_product_model.dart';
 import 'package:flutly_store/app/features/cart/data/repositories/cart_repository_impl.dart';
@@ -24,14 +24,14 @@ void main() {
   late CartRepositoryImpl repository;
 
   const userId = 'user-1';
-  final credentials = CredentialsModel(
+  const credentials = CredentialsModel(
     userId: userId,
     name: 'User',
     email: 'user@test.com',
     provider: 'email',
   );
 
-  final cartEntity = Cart(
+  const cartEntity = Cart(
     totalPrice: 120.0,
     totalItems: 2,
     products: {
@@ -45,7 +45,7 @@ void main() {
     },
   );
 
-  final cartModel = CartModel(
+  const cartModel = CartModel(
     totalPrice: 120.0,
     totalItems: 2,
     products: {
@@ -61,7 +61,7 @@ void main() {
 
   setUpAll(() {
     registerFallbackValue(
-      CartModel(totalPrice: 0.0, totalItems: 0, products: {}),
+      const CartModel(totalPrice: 0.0, totalItems: 0, products: {}),
     );
   });
 
@@ -93,7 +93,7 @@ void main() {
 
   test('saveCart syncs remote and local when user is authenticated', () async {
     when(() => authLocalDataSource.getCredentials()).thenReturn(
-      TaskEither.right(Option.of(credentials)),
+      TaskEither.right(const Option.of(credentials)),
     );
     when(() => remoteDataSource.saveCart(userId, any())).thenReturn(
       TaskEither.right(null),
@@ -114,7 +114,7 @@ void main() {
       TaskEither.right(none()),
     );
     when(() => localDataSource.getCart()).thenReturn(
-      TaskEither.right(Option.of(cartModel)),
+      TaskEither.right(const Option.of(cartModel)),
     );
 
     final result = await repository.getCart().run();
@@ -133,10 +133,10 @@ void main() {
 
   test('getCart syncs local to remote when remote is empty', () async {
     when(() => authLocalDataSource.getCredentials()).thenReturn(
-      TaskEither.right(Option.of(credentials)),
+      TaskEither.right(const Option.of(credentials)),
     );
     when(() => localDataSource.getCart()).thenReturn(
-      TaskEither.right(Option.of(cartModel)),
+      TaskEither.right(const Option.of(cartModel)),
     );
     when(() => remoteDataSource.getCart(userId)).thenReturn(
       TaskEither.right(none()),
@@ -154,13 +154,13 @@ void main() {
 
   test('getCart syncs remote to local when local is empty', () async {
     when(() => authLocalDataSource.getCredentials()).thenReturn(
-      TaskEither.right(Option.of(credentials)),
+      TaskEither.right(const Option.of(credentials)),
     );
     when(() => localDataSource.getCart()).thenReturn(
       TaskEither.right(none()),
     );
     when(() => remoteDataSource.getCart(userId)).thenReturn(
-      TaskEither.right(Option.of(cartModel)),
+      TaskEither.right(const Option.of(cartModel)),
     );
     when(() => localDataSource.saveCart(any())).thenReturn(
       TaskEither.right(null),
@@ -174,8 +174,8 @@ void main() {
   });
 
   test('getCart merges carts when both local and remote exist', () async {
-    final remoteCart = cartModel;
-    final localCart = CartModel(
+    const remoteCart = cartModel;
+    const localCart = CartModel(
       totalPrice: 40.0,
       totalItems: 2,
       products: {
@@ -190,13 +190,13 @@ void main() {
     );
 
     when(() => authLocalDataSource.getCredentials()).thenReturn(
-      TaskEither.right(Option.of(credentials)),
+      TaskEither.right(const Option.of(credentials)),
     );
     when(() => localDataSource.getCart()).thenReturn(
-      TaskEither.right(Option.of(localCart)),
+      TaskEither.right(const Option.of(localCart)),
     );
     when(() => remoteDataSource.getCart(userId)).thenReturn(
-      TaskEither.right(Option.of(remoteCart)),
+      TaskEither.right(const Option.of(remoteCart)),
     );
     when(() => remoteDataSource.saveCart(userId, any())).thenReturn(
       TaskEither.right(null),
@@ -209,9 +209,10 @@ void main() {
 
     expect(result.isRight(), isTrue);
     final captured =
-        verify(() => remoteDataSource.saveCart(userId, captureAny()))
-            .captured
-            .single as CartModel;
+        verify(
+              () => remoteDataSource.saveCart(userId, captureAny()),
+            ).captured.single
+            as CartModel;
     expect(captured.totalItems, 4);
     expect(captured.totalPrice, 160.0);
     expect(captured.products.length, 2);
@@ -235,7 +236,7 @@ void main() {
 
   test('clearCart syncs remote and local when user is authenticated', () async {
     when(() => authLocalDataSource.getCredentials()).thenReturn(
-      TaskEither.right(Option.of(credentials)),
+      TaskEither.right(const Option.of(credentials)),
     );
     when(() => remoteDataSource.clearCart(userId)).thenReturn(
       TaskEither.right(null),

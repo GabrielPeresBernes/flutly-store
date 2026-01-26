@@ -5,8 +5,8 @@ import 'package:flutly_store/app/features/auth/utils/auth_utils.dart';
 import 'package:flutly_store/app/shared/widgets/app_icon_widget.dart';
 import 'package:flutly_store/app/shared/widgets/inputs/app_reactive_text_field_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../../../../../utils/test_utils.dart';

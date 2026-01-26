@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 import '../../../../shared/errors/app_exception.dart';
-import '../../../../shared/utils/platform_utils.dart';
 import '../../../../shared/validators/password_change_validator.dart';
 import '../../../auth/auth.dart';
 import '../../domain/entities/bug_report.dart';

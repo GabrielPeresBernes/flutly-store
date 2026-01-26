@@ -6,7 +6,6 @@ import 'package:flutly_store/app/shared/errors/app_exception.dart';
 import 'package:flutly_store/app/shared/widgets/app_network_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
 
 import '../../../../../utils/test_utils.dart';
 

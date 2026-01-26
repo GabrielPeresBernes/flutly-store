@@ -1,12 +1,12 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fpdart/fpdart.dart';
 
-import '../../../../shared/errors/app_exception.dart';
-import '../../constants/cart_constants.dart';
-import '../../domain/cache/cart_cache.dart';
-import '../../domain/entities/cart.dart';
-import '../../domain/entities/cart_product.dart';
-import '../../domain/repositories/cart_repository.dart';
+import '../../../../../shared/errors/app_exception.dart';
+import '../../../constants/cart_constants.dart';
+import '../../../domain/cache/cart_cache.dart';
+import '../../../domain/entities/cart.dart';
+import '../../../domain/entities/cart_product.dart';
+import '../../../domain/repositories/cart_repository.dart';
 
 part 'cart_state.dart';
 

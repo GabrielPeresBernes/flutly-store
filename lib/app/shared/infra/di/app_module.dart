@@ -53,7 +53,9 @@ class AppModule extends InjectorModule {
 
     Env.validate();
 
-    await const FirebaseModule().register(injector);
+    if (Env.useFirebase) {
+      await const FirebaseModule().register(injector);
+    }
 
     final sharedPreferences = await SharedPreferencesWithCache.create(
       cacheOptions: const SharedPreferencesWithCacheOptions(

@@ -7,8 +7,8 @@ import '../../../../shared/utils/string_utils.dart';
 import '../../../../shared/widgets/inputs/app_text_field_widget.dart';
 import '../../../catalog/infra/routes/catalog_route.dart';
 import '../../../catalog/infra/routes/catalog_route_params.dart';
-import '../bloc/search_history_cubit.dart';
-import '../bloc/search_suggestions_cubit.dart';
+import '../bloc/history/search_history_cubit.dart';
+import '../bloc/suggestions/search_suggestions_cubit.dart';
 
 class SearchTextFieldWidget extends StatefulWidget {
   const SearchTextFieldWidget({super.key});

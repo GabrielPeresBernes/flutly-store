@@ -18,7 +18,7 @@ void main() {
   });
 
   test('getProducts applies price filters and uses category endpoint', () async {
-    final response = ProductsPageModel(
+    const response = ProductsPageModel(
       products: [
         ProductModel(
           id: 1,
@@ -50,7 +50,7 @@ void main() {
       ),
     ).thenAnswer((_) async => response);
 
-    final filters = ProductFilters(
+    const filters = ProductFilters(
       sortBy: 'price',
       order: 'asc',
       minPrice: 50.0,
@@ -88,7 +88,7 @@ void main() {
   });
 
   test('getProducts filters by category when searching', () async {
-    final response = ProductsPageModel(
+    const response = ProductsPageModel(
       products: [
         ProductModel(
           id: 1,

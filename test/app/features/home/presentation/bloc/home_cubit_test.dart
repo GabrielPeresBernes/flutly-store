@@ -14,7 +14,7 @@ void main() {
   late HomeRepository repository;
 
   final productLists = [
-    HomeProductList(
+    const HomeProductList(
       title: 'Highlights',
       products: [
         HomeProduct(

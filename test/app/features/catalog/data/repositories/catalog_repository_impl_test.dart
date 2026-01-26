@@ -20,7 +20,7 @@ void main() {
   });
 
   test('getProducts maps model to entity and forwards params', () async {
-    final model = ProductsPageModel(
+    const model = ProductsPageModel(
       products: [
         ProductModel(
           id: 1,
@@ -39,7 +39,7 @@ void main() {
     const limit = 10;
     const skip = 20;
     const searchTerm = 'case';
-    final filters = ProductFilters(sortBy: 'price', order: 'asc');
+    const filters = ProductFilters(sortBy: 'price', order: 'asc');
 
     when(
       () => remoteDataSource.getProducts(

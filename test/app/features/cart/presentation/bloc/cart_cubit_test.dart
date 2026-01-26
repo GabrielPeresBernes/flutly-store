@@ -3,7 +3,7 @@ import 'package:flutly_store/app/features/cart/constants/cart_constants.dart';
 import 'package:flutly_store/app/features/cart/domain/entities/cart.dart';
 import 'package:flutly_store/app/features/cart/domain/entities/cart_product.dart';
 import 'package:flutly_store/app/features/cart/domain/repositories/cart_repository.dart';
-import 'package:flutly_store/app/features/cart/presentation/bloc/cart_cubit.dart';
+import 'package:flutly_store/app/features/cart/presentation/bloc/cart/cart_cubit.dart';
 import 'package:flutly_store/app/shared/errors/app_exception.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fpdart/fpdart.dart';
@@ -16,14 +16,14 @@ void main() {
 
   const productId = 1;
   const uiId = 99;
-  final product = CartProduct(
+  const product = CartProduct(
     id: productId,
     quantity: 1,
     thumbnail: 'thumb.png',
     name: 'Item',
     price: 10.0,
   );
-  final cart = Cart(
+  const cart = Cart(
     totalPrice: 10.0,
     totalItems: 1,
     products: {productId: product},
@@ -41,7 +41,7 @@ void main() {
     'refreshCart emits loaded with update flag when session changed',
     build: () {
       when(() => repository.getCart()).thenReturn(
-        TaskEither.right(Option.of(cart)),
+        TaskEither.right(const Option.of(cart)),
       );
       return CartCubit(repository);
     },

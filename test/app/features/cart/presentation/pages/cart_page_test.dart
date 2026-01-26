@@ -1,8 +1,8 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutly_store/app/features/cart/domain/entities/cart.dart';
 import 'package:flutly_store/app/features/cart/domain/entities/cart_product.dart';
-import 'package:flutly_store/app/features/cart/presentation/bloc/cart_cubit.dart';
-import 'package:flutly_store/app/features/cart/presentation/bloc/cart_popular_products_cubit.dart';
+import 'package:flutly_store/app/features/cart/presentation/bloc/cart/cart_cubit.dart';
+import 'package:flutly_store/app/features/cart/presentation/bloc/popular_products/cart_popular_products_cubit.dart';
 import 'package:flutly_store/app/features/cart/presentation/pages/cart_page.dart';
 import 'package:flutly_store/app/features/cart/presentation/widgets/page_states/cart_empty_widget.dart';
 import 'package:flutly_store/app/features/cart/presentation/widgets/page_states/cart_failure_widget.dart';
@@ -13,7 +13,6 @@ import 'package:flutly_store/app/features/product/product.dart';
 import 'package:flutly_store/app/shared/bloc/app_cubit.dart';
 import 'package:flutly_store/app/shared/errors/app_exception.dart';
 import 'package:flutly_store/app/shared/widgets/products/medium_product_card_widget.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';

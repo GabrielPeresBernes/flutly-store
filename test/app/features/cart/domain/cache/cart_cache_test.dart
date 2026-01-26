@@ -113,7 +113,7 @@ void main() {
 
   test('setCart replaces cached values', () {
     final cache = CartCache();
-    final cart = Cart(
+    const cart = Cart(
       totalPrice: 25.0,
       totalItems: 2,
       products: {

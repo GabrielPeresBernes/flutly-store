@@ -4,9 +4,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:fpdart/fpdart.dart';
 
-import '../../../../shared/types/response_type.dart';
-import '../../../../shared/utils/task_utils.dart';
-import '../models/cart_model.dart';
+import '../../../../../shared/types/response_type.dart';
+import '../../../../../shared/utils/task_utils.dart';
+import '../../models/cart_model.dart';
 import 'cart_remote_data_source.dart';
 
 class CartRemoteDataSourceImpl implements CartRemoteDataSource {
